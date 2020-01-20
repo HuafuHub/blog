@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    CSS2 --- 应用篇 |  Huafu
+  </title>
+  
+  <link rel="shortcut icon" href="http://localhost:4000/blog/favicon.ico" />
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  <script src="/blog/js/pace.min.js"></script>
+
+  
+
+  
+
+<link rel="alternate" href="/blog/atom.xml" title="Huafu" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-CSS2a" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  CSS2 --- 应用篇
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/blog/2020/01/02/CSS2a/" class="article-date">
+  <time datetime="2020-01-01T17:00:00.000Z" itemprop="datePublished">2020-01-02</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h2 id="（一）概述"><a href="#（一）概述" class="headerlink" title="（一）概述"></a>（一）概述</h2><h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h3><ul>
+<li>CSS：是w3c组织定义的语言标准，用于定义网页文档的样式</li>
+<li>css：层叠样式表 Cascading Style Sheets </li>
+<li><strong>样式</strong>：东西如何布局， 该东西展示出什么效果</li>
+</ul>
+<h3 id="2-术语"><a href="#2-术语" class="headerlink" title="2.术语"></a>2.术语</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">color</span>: <span class="number">#000</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h4 id="（1）选择器"><a href="#（1）选择器" class="headerlink" title="（1）选择器"></a>（1）选择器</h4><ul>
+<li>ID选择器</li>
+<li>class选择器</li>
+<li>元素选择器</li>
+</ul>
+<h4 id="（2）声明块"><a href="#（2）声明块" class="headerlink" title="（2）声明块"></a>（2）声明块</h4><ul>
+<li>属性名</li>
+<li>属性值</li>
+</ul>
+<h4 id="（3）样式表"><a href="#（3）样式表" class="headerlink" title="（3）样式表"></a>（3）样式表</h4><ul>
+<li>内部样式表 style元素</li>
+<li>内联样式 style属性</li>
+<li>外部样式表 link元素<ul>
+<li>有利于样式复用</li>
+<li>有利于浏览器缓存，提高页面响应</li>
+<li>有利于HTML和CSS代码分离，利于维护</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="（二）选择器"><a href="#（二）选择器" class="headerlink" title="（二）选择器"></a>（二）选择器</h2><h3 id="1-常用选择器"><a href="#1-常用选择器" class="headerlink" title="1.常用选择器"></a>1.常用选择器</h3><table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">写法</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">ID</td>
+<td align="left">#id</td>
+<td align="left">ID选择器</td>
+</tr>
+<tr>
+<td align="left">Class</td>
+<td align="left">.class</td>
+<td align="left">类选择器</td>
+</tr>
+<tr>
+<td align="left">通配符</td>
+<td align="left">*</td>
+<td align="left">选择所有的元素</td>
+</tr>
+<tr>
+<td align="left">属性</td>
+<td align="left">[xxx]</td>
+<td align="left">=、~=、8=、^=、$=</td>
+</tr>
+<tr>
+<td align="left">伪类</td>
+<td align="left">:link/:visited/:hover/:active</td>
+<td align="left">爱恨法则</td>
+</tr>
+<tr>
+<td align="left">伪元素</td>
+<td align="left">::before/::after</td>
+<td align="left">content</td>
+</tr>
+<tr>
+<td align="left">————————————</td>
+<td align="left">————————————</td>
+<td align="left">————————————</td>
+</tr>
+<tr>
+<td align="left">并且</td>
+<td align="left">AB</td>
+<td align="left">选择器连写</td>
+</tr>
+<tr>
+<td align="left">并列</td>
+<td align="left">A,B</td>
+<td align="left">逗号分隔（语法糖）</td>
+</tr>
+<tr>
+<td align="left">后代</td>
+<td align="left">A B</td>
+<td align="left">空格分隔</td>
+</tr>
+<tr>
+<td align="left">直接子元素</td>
+<td align="left">A&gt;b</td>
+<td align="left">&gt;连接</td>
+</tr>
+<tr>
+<td align="left">弟元素</td>
+<td align="left">A~B</td>
+<td align="left">所有自身之后出现的兄弟元素</td>
+</tr>
+<tr>
+<td align="left">直接弟元素</td>
+<td align="left">A+B</td>
+<td align="left">自身之后出现的第一个兄弟元素</td>
+</tr>
+<tr>
+<td align="left">————————————</td>
+<td align="left">————————————</td>
+<td align="left">————————————</td>
+</tr>
+<tr>
+<td align="left">伪类</td>
+<td align="left">:fist-child/last-child/nth-child(n)</td>
+<td align="left">第n个子元素</td>
+</tr>
+<tr>
+<td align="left">伪类</td>
+<td align="left">:first-of-type/last-of-type/nth-of-type(n)</td>
+<td align="left">第n个指定类型的子元素</td>
+</tr>
+<tr>
+<td align="left">伪元素</td>
+<td align="left">::first-letter</td>
+<td align="left">第一个字符</td>
+</tr>
+<tr>
+<td align="left">伪元素</td>
+<td align="left">::first-line</td>
+<td align="left">第一行</td>
+</tr>
+<tr>
+<td align="left">伪元素</td>
+<td align="left">::selection</td>
+<td align="left">选中字符</td>
+</tr>
+<tr>
+<td align="left">—</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="2-层叠"><a href="#2-层叠" class="headerlink" title="2.层叠"></a>2.层叠</h3><h4 id="（1）声明冲突"><a href="#（1）声明冲突" class="headerlink" title="（1）声明冲突"></a>（1）声明冲突</h4><ul>
+<li>同一个样式重复应用到了同一个元素上</li>
+<li><strong>层叠：</strong> 浏览器自动解决冲突的过程</li>
+</ul>
+<h4 id="（2）权重计算"><a href="#（2）权重计算" class="headerlink" title="（2）权重计算"></a>（2）权重计算</h4><h5 id="1）比较重要性"><a href="#1）比较重要性" class="headerlink" title="1）比较重要性"></a>1）比较重要性</h5><ul>
+<li>!important</li>
+<li>普通样式</li>
+<li>浏览器默认样式</li>
+</ul>
+<h5 id="2）比较特殊性"><a href="#2）比较特殊性" class="headerlink" title="2）比较特殊性"></a>2）比较特殊性</h5><ul>
+<li>选择器范围越窄越特殊</li>
+<li>通过选择器计算出4位数（xxxx）比大小（<font color=red>256进制</font>）<ul>
+<li><strong>千位：</strong> 行内样式计1,否则为0</li>
+<li><strong>百位：</strong> ID选择器数量之和</li>
+<li><strong>十位：</strong> 类、伪类、属性选择器数量之和</li>
+<li><strong>个位：</strong> 元素、伪元素选择器数量之和</li>
+</ul>
+</li>
+</ul>
+<h5 id="3）比较源次序"><a href="#3）比较源次序" class="headerlink" title="3）比较源次序"></a>3）比较源次序</h5><ul>
+<li>源代码书写靠后的胜出</li>
+</ul>
+<hr>
+<h2 id="（三）样式"><a href="#（三）样式" class="headerlink" title="（三）样式"></a>（三）样式</h2><h3 id="1-常用样式"><a href="#1-常用样式" class="headerlink" title="1.常用样式"></a>1.常用样式</h3><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">属性值</th>
+<th align="left">含义</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>color</strong></td>
+<td align="left">预设值（单词）、色值（rgb）、十六进制（hex）</td>
+<td align="left">字体颜色</td>
+<td align="left">rgba（透明通道）</td>
+</tr>
+<tr>
+<td align="left"><strong>background-color</strong></td>
+<td align="left">预设值（单词）、色值（rgb）、十六进制（hex）</td>
+<td align="left">背景色</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>font-size</strong></td>
+<td align="left">像素（px）、相对父元素（em）</td>
+<td align="left">字体大小</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>font-weight</strong></td>
+<td align="left">预设值、数字</td>
+<td align="left">粗体</td>
+<td align="left">（b/strong）</td>
+</tr>
+<tr>
+<td align="left"><strong>font-family</strong></td>
+<td align="left">预设值、数字</td>
+<td align="left">字体</td>
+<td align="left">（sans-serif默认非衬线字体）</td>
+</tr>
+<tr>
+<td align="left"><strong>font-style</strong></td>
+<td align="left">normal、italic</td>
+<td align="left">斜体</td>
+<td align="left">（i/em）</td>
+</tr>
+<tr>
+<td align="left"><strong>text-decoration</strong></td>
+<td align="left">none、line-through</td>
+<td align="left">修饰</td>
+<td align="left">（s/del）</td>
+</tr>
+<tr>
+<td align="left"><strong>text-indent</strong></td>
+<td align="left">em</td>
+<td align="left">首行文本缩进</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>text-align</strong></td>
+<td align="left">left、center、right</td>
+<td align="left">水平对齐方式</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>line-height</strong></td>
+<td align="left">px、数字（自身高度的倍数）</td>
+<td align="left">行距</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>letter-spacing</strong></td>
+<td align="left">px、em</td>
+<td align="left">字间距</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>width</strong></td>
+<td align="left">px、%</td>
+<td align="left">容器宽度</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>height</strong></td>
+<td align="left">px、%</td>
+<td align="left">容器高度</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">————————————</td>
+<td align="left">————————————</td>
+<td align="left">————————————</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>opcity</strong></td>
+<td align="left">0~1</td>
+<td align="left">盒子透明度</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>cursor</strong></td>
+<td align="left">pointer</td>
+<td align="left">鼠标样式</td>
+<td align="left">图片格式.ico/.cur</td>
+</tr>
+<tr>
+<td align="left"><strong>display</strong></td>
+<td align="left">none</td>
+<td align="left">不生成盒子</td>
+<td align="left">不占空间</td>
+</tr>
+<tr>
+<td align="left"><strong>visibility</strong></td>
+<td align="left">hidden</td>
+<td align="left">视觉隐藏</td>
+<td align="left">占空间</td>
+</tr>
+<tr>
+<td align="left"><strong>background-image</strong></td>
+<td align="left">URL</td>
+<td align="left">背景图片</td>
+<td align="left">仅用于美化作用时，若属网页内容应用img</td>
+</tr>
+<tr>
+<td align="left">————————————</td>
+<td align="left">————————————</td>
+<td align="left">————————————</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>display</strong></td>
+<td align="left">list-item</td>
+<td align="left">仍然是块盒，但会生成一个附带的次盒子</td>
+<td align="left">次盒子排列在前 ul&gt;li 元素（可继承）</td>
+</tr>
+<tr>
+<td align="left"><strong>list-style</strong></td>
+<td align="left">none</td>
+<td align="left">设置次盒子样式</td>
+<td align="left">清空次盒子</td>
+</tr>
+<tr>
+<td align="left"><strong>text-align</strong></td>
+<td align="left">justify</td>
+<td align="left">除最后一行外，分散对齐</td>
+<td align="left">平均分布空白</td>
+</tr>
+<tr>
+<td align="left"><strong>direction</strong></td>
+<td align="left">ltr</td>
+<td align="left">开始到结束的方向</td>
+<td align="left">rtl从右到左</td>
+</tr>
+<tr>
+<td align="left"><strong>writing-mode</strong></td>
+<td align="left">vertical-rtl</td>
+<td align="left">设置文字书写方向</td>
+<td align="left">垂直书写</td>
+</tr>
+</tbody></table>
+<h3 id="2-重置样式（reset-css）"><a href="#2-重置样式（reset-css）" class="headerlink" title="2.重置样式（reset.css）"></a>2.重置样式（reset.css）</h3><ul>
+<li>重置浏览器默认样式</li>
+<li>常见重置样式表：normalize.css | reset.css | meyer.css</li>
+</ul>
+<h3 id="3-爱恨法则（love-hate）"><a href="#3-爱恨法则（love-hate）" class="headerlink" title="3.爱恨法则（love hate）"></a>3.爱恨法则（love hate）</h3><ul>
+<li>a:link 未访问过</li>
+<li>a:visited 已访问过</li>
+<li>a:hover 获得鼠标焦点</li>
+<li>a:active 鼠标按下</li>
+</ul>
+<h3 id="4-继承"><a href="#4-继承" class="headerlink" title="4.继承"></a>4.继承</h3><ul>
+<li>子元素会继承父元素的某些css样式（代代相传）</li>
+<li>通常，跟文字相关的样式会继承</li>
+</ul>
+<h3 id="5-属性值的计算过程"><a href="#5-属性值的计算过程" class="headerlink" title="5.属性值的计算过程"></a>5.属性值的计算过程</h3><h4 id="（1）渲染"><a href="#（1）渲染" class="headerlink" title="（1）渲染"></a>（1）渲染</h4><ul>
+<li>元素一个一个依次渲染，顺序按照DOMTree的顺序（深度优先）</li>
+<li>元素要渲染必须所有的css属性都有值</li>
+</ul>
+<h4 id="（2）从无属性值到所有属性都有值的过程，为css属性值计算过程"><a href="#（2）从无属性值到所有属性都有值的过程，为css属性值计算过程" class="headerlink" title="（2）从无属性值到所有属性都有值的过程，为css属性值计算过程"></a>（2）从无属性值到所有属性都有值的过程，为css属性值计算过程</h4><h5 id="1）确定声明值："><a href="#1）确定声明值：" class="headerlink" title="1）确定声明值："></a>1）确定声明值：</h5><ul>
+<li>将没有冲突的属性声明值直接确定css属性值（<font color=red>浏览器默认值为声明值</font>）</li>
+</ul>
+<h5 id="2）层叠冲突："><a href="#2）层叠冲突：" class="headerlink" title="2）层叠冲突："></a>2）层叠冲突：</h5><ul>
+<li>将有冲突的属性声明值按照层叠规则确定css属性值</li>
+</ul>
+<h5 id="3）使用继承："><a href="#3）使用继承：" class="headerlink" title="3）使用继承："></a>3）使用继承：</h5><ul>
+<li>对没有值的属性，若可以继承，则继承父元素的值</li>
+</ul>
+<h5 id="4）使用默认值："><a href="#4）使用默认值：" class="headerlink" title="4）使用默认值："></a>4）使用默认值：</h5><ul>
+<li>对没有值的属性，使用默认值（<font color=red>此默认值非浏览器默认值</font>）</li>
+</ul>
+<hr>
+<h2 id="（四）布局"><a href="#（四）布局" class="headerlink" title="（四）布局"></a>（四）布局</h2><h3 id="1-盒模型"><a href="#1-盒模型" class="headerlink" title="1.盒模型"></a>1.盒模型</h3><h4 id="（1）属性"><a href="#（1）属性" class="headerlink" title="（1）属性"></a>（1）属性</h4><table>
+<thead>
+<tr>
+<th align="left">设置</th>
+<th align="left">参数</th>
+<th align="left">块盒</th>
+<th align="left">行盒</th>
+<th align="left">行块盒</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">内容</td>
+<td align="left">width/height</td>
+<td align="left">有效</td>
+<td align="left">无效</td>
+<td align="left">有效</td>
+</tr>
+<tr>
+<td align="left">内边距</td>
+<td align="left">padding</td>
+<td align="left">有效</td>
+<td align="left">仅水平有效</td>
+<td align="left">有效</td>
+</tr>
+<tr>
+<td align="left">边框</td>
+<td align="left">border</td>
+<td align="left">有效</td>
+<td align="left">仅水平有效</td>
+<td align="left">有效</td>
+</tr>
+<tr>
+<td align="left">外边距</td>
+<td align="left">margin</td>
+<td align="left">有效</td>
+<td align="left">仅水平有效</td>
+<td align="left">有效</td>
+</tr>
+</tbody></table>
+<h4 id="（2）组成"><a href="#（2）组成" class="headerlink" title="（2）组成"></a>（2）组成</h4><table>
+<thead>
+<tr>
+<th align="left">组成</th>
+<th align="left">参数</th>
+<th align="center">内容盒</th>
+<th align="center">填充盒</th>
+<th align="center">边框盒</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">内容</td>
+<td align="left">width/height</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="left">内边距</td>
+<td align="left">padding</td>
+<td align="center">——</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="left">边框</td>
+<td align="left">border</td>
+<td align="center">——</td>
+<td align="center">——</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="left">外边距</td>
+<td align="left">margin</td>
+<td align="center">——</td>
+<td align="center">——</td>
+<td align="center">——</td>
+</tr>
+</tbody></table>
+<h4 id="（3）特点"><a href="#（3）特点" class="headerlink" title="（3）特点"></a>（3）特点</h4><table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">特点</th>
+<th align="left">处理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>宽高</strong></td>
+<td align="left">默认设置的是内容盒</td>
+<td align="left">css3中box-sizing属性可更改</td>
+</tr>
+<tr>
+<td align="left"><strong>背景</strong></td>
+<td align="left">默认覆盖范围是边框盒</td>
+<td align="left">background-clip属性可更改</td>
+</tr>
+<tr>
+<td align="left"><strong>内容溢出</strong></td>
+<td align="left">默认可见</td>
+<td align="left">overflow属性可更改</td>
+</tr>
+<tr>
+<td align="left"><strong>断词规则</strong></td>
+<td align="left">中文字符折断，英文单词折断</td>
+<td align="left">Word-break属性可更改</td>
+</tr>
+<tr>
+<td align="left"><strong>空白处理</strong></td>
+<td align="left">文字溢出显示</td>
+<td align="left">单行文本固定处理方式、多行文本人工处理</td>
+</tr>
+<tr>
+<td align="left"><strong>空白折叠</strong></td>
+<td align="left">所有的空白字符折叠为一个空格</td>
+<td align="left">发生在行盒（行块盒）内部、发生在行盒（行块盒）之间；white-space 属性可更改</td>
+</tr>
+<tr>
+<td align="left"><strong>img图片</strong></td>
+<td align="left">设置一个属性，另一个会跟随图片比例变化</td>
+<td align="left">object-fit 属性可设置图片比例与盒子之间的适应情况</td>
+</tr>
+<tr>
+<td align="left"><strong>匿名行盒</strong></td>
+<td align="left">文字直接出现在块盒中时，浏览器会自动生成一个莫名行盒（不可见）包裹内容</td>
+<td align="left">==行框==承载文字内容的必要条件</td>
+</tr>
+<tr>
+<td align="left"><strong>可替换元素</strong></td>
+<td align="left">显示结果取决于元素属性</td>
+<td align="left">——</td>
+</tr>
+<tr>
+<td align="left"><strong>不可替换元素</strong></td>
+<td align="left">显示结果取决于元素内容</td>
+<td align="left">——</td>
+</tr>
+<tr>
+<td align="left">—</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="2-视觉格式化模型"><a href="#2-视觉格式化模型" class="headerlink" title="2.视觉格式化模型"></a>2.视觉格式化模型</h3><h4 id="（1）常规流"><a href="#（1）常规流" class="headerlink" title="（1）常规流"></a>（1）常规流</h4><h5 id="1）概念"><a href="#1）概念" class="headerlink" title="1）概念"></a>1）概念</h5><ul>
+<li>常规流、文档流、普通文档流、常规文档流</li>
+<li>所有元素默认都属于常规流布局</li>
+<li>总体规则：块盒独占一行、行盒水平依次排列</li>
+</ul>
+<h5 id="2）包含块"><a href="#2）包含块" class="headerlink" title="2）包含块"></a>2）包含块</h5><ul>
+<li>包含块决定了盒子的排列区域</li>
+<li>包含块通常是父元素的内容盒</li>
+</ul>
+<h5 id="3）水平布局"><a href="#3）水平布局" class="headerlink" title="3）水平布局"></a>3）水平布局</h5><ul>
+<li><font color=red>盒子的总宽度必须等于包含块宽度</font></li>
+<li>width：auto =&gt;&gt; 默认吸收剩余空间</li>
+<li>margin：auto =&gt;&gt; 两边平均吸收剩余空间（==剩余空间的吸收：width强于margin==）</li>
+<li>margin：0（默认值）若width、padding、border吸收后还有剩余空间，则剩余的全由margin-right/margin-left吸收</li>
+<li>在常规流中，块盒在包含块中的居中，可以定宽，左右margin设置为auto</li>
+</ul>
+<h5 id="4）垂直布局"><a href="#4）垂直布局" class="headerlink" title="4）垂直布局"></a>4）垂直布局</h5><ul>
+<li>height：auto =&gt;&gt; 自适应</li>
+<li>margin：auto =&gt;&gt; 相当于0（默认值）</li>
+<li>外边距合并：块盒上下相连外边距会发生合并（兄弟元素、父子元素）</li>
+<li>解决外边距合并问题只要中间增加任意东西，使之不在相连即可（元素、边框、内边距）</li>
+</ul>
+<h5 id="5）百分比取值"><a href="#5）百分比取值" class="headerlink" title="5）百分比取值"></a>5）百分比取值</h5><ul>
+<li>width、padding、border、margin百分比取值相对于包含块的宽度（与高度无关）</li>
+<li>height百分比取值<ul>
+<li>包含块的高度取决于子元素高度时，设置百分比无效</li>
+<li>包含块的高度不取决于子元素高度时，百分比取决于父元素高度</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="（2）浮动"><a href="#（2）浮动" class="headerlink" title="（2）浮动"></a>（2）浮动</h4><h5 id="1）应用"><a href="#1）应用" class="headerlink" title="1）应用"></a>1）应用</h5><ul>
+<li>文字环绕</li>
+<li>水平排列</li>
+</ul>
+<h5 id="2）基本特点"><a href="#2）基本特点" class="headerlink" title="2）基本特点"></a>2）基本特点</h5><ul>
+<li>修改float属性<ul>
+<li>none 默认（常规流布局）</li>
+<li>left 靠上靠左浮动（脱离文档流）</li>
+<li>right 靠上考右浮动（脱离文档流）</li>
+</ul>
+</li>
+<li>强制更改display属性为block（==块盒才能浮动==）</li>
+<li>浮动元素的包含块与常规流一致（父元素内容盒）</li>
+<li>浮动元素将脱离文档流（文档正常布局不会考虑脱离文档流的元素）</li>
+</ul>
+<h5 id="3）盒子尺寸"><a href="#3）盒子尺寸" class="headerlink" title="3）盒子尺寸"></a>3）盒子尺寸</h5><ul>
+<li>width：auto 适应内容（不吸收剩余空间）</li>
+<li>height：auto 适应内容（与常规流一致）</li>
+<li>margin：auto 相当于设置0（不吸收剩余空间）</li>
+<li>内边距、边框、外边距、百分比与常规流一致</li>
+</ul>
+<h5 id="4）盒子排列"><a href="#4）盒子排列" class="headerlink" title="4）盒子排列"></a>4）盒子排列</h5><ul>
+<li>float：left 靠上靠左排列</li>
+<li>float：right 靠上考右排列</li>
+<li>与常规流块盒混排<ul>
+<li>常规流盒子在前，浮动盒子会避开常规流盒子</li>
+<li>浮动盒子在前，常规流盒子会无视浮动盒子</li>
+</ul>
+</li>
+<li>与常规流行盒混排<ul>
+<li>常规流盒子在前，浮动盒子会避开常规流盒子</li>
+<li>浮动盒子在前，常规流盒子也会避开浮动盒子</li>
+<li>如果文字直接放在块盒中，浏览器会自动生成匿名行盒（不可见）包裹文字</li>
+<li><font color=red>内容一定只能放在行盒中（显式行盒、匿名行盒）</font></li>
+</ul>
+</li>
+<li>浮动盒子不会发生外边距合并</li>
+</ul>
+<h5 id="5）高度坍塌"><a href="#5）高度坍塌" class="headerlink" title="5）高度坍塌"></a>5）高度坍塌</h5><ul>
+<li>原因：常规流盒子在高度自适应时，计算不会考虑浮动盒子</li>
+<li>清除浮动 clear属性（常规流盒子考虑前面的浮动盒子）</li>
+<li>clearfix增加在浮动元素的父元素上解决高度坍塌<ul>
+<li>none 默认不清楚</li>
+<li>left 考虑左浮动</li>
+<li>right 考虑有浮动</li>
+<li>both 考虑所有浮动<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">content</span>:<span class="string">""</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">display</span>: block;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">clear</span>: both;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="6）布局规则"><a href="#6）布局规则" class="headerlink" title="6）布局规则"></a>6）布局规则</h5><ul>
+<li>左浮动的盒子向上向左排列</li>
+<li>右浮动的盒子向上向右排列</li>
+<li>浮动盒子的顶边不得高于上一个盒子的顶边</li>
+<li>若剩余空间无法放下浮动盒子，则该盒子向下移动，直到具备足够的空间收纳盒子，然后向左或向右移动</li>
+</ul>
+<hr>
+<h4 id="（3）定位"><a href="#（3）定位" class="headerlink" title="（3）定位"></a>（3）定位</h4><h5 id="1）概念-1"><a href="#1）概念-1" class="headerlink" title="1）概念"></a>1）概念</h5><ul>
+<li>一个元素，只要position的取值不是static，该元素是一个定位元素</li>
+</ul>
+<h5 id="2）基本特点-1"><a href="#2）基本特点-1" class="headerlink" title="2）基本特点"></a>2）基本特点</h5><ul>
+<li>修改position属性<ul>
+<li>static 默认（常规流布局）</li>
+<li>relative 相对定位（不会脱离文档流）</li>
+<li>absolute 绝对定位（脱离文档流）</li>
+<li>fixed 固定定位（脱离文档流）</li>
+</ul>
+</li>
+</ul>
+<h5 id="3）相对定位"><a href="#3）相对定位" class="headerlink" title="3）相对定位"></a>3）相对定位</h5><ul>
+<li>不会导致元素脱离文档流，只相对于原本位置进行偏移<ul>
+<li>当left/right同时设置时，以left为准</li>
+<li>当top与bottom同时设置时，以top为准</li>
+</ul>
+</li>
+<li>与margin的区别<ul>
+<li>margin是包含块的组成部分，会影响剩余空间而导致width发生变化</li>
+<li>relative偏移不会影响自身width/height，也不会影响其它盒子的布局</li>
+</ul>
+</li>
+<li>通常用作绝对定位的参考点</li>
+</ul>
+<h5 id="4）绝对定位"><a href="#4）绝对定位" class="headerlink" title="4）绝对定位"></a>4）绝对定位</h5><ul>
+<li>脱离文档流</li>
+<li>width/height为auto时，自适应适应内容</li>
+<li>==包含块变化==：找祖先元素中最近的定位元素的<font color=ren>填充盒</font></li>
+</ul>
+<h5 id="5）固定定位"><a href="#5）固定定位" class="headerlink" title="5）固定定位"></a>5）固定定位</h5><ul>
+<li>特点与绝对定位一样</li>
+<li>==包含块变化==：视口</li>
+</ul>
+<hr>
+<h3 id="3-块级格式化上下文"><a href="#3-块级格式化上下文" class="headerlink" title="3.块级格式化上下文"></a>3.块级格式化上下文</h3><h4 id="（1）概念"><a href="#（1）概念" class="headerlink" title="（1）概念"></a>（1）概念</h4><ul>
+<li>BFC：block formatting context</li>
+<li>它规定了在该区域中，常规流块盒的布局<ul>
+<li>常规流块盒在水平方向上，必须撑满包含块</li>
+<li>常规流块盒在包含块的垂直方向上依次摆放</li>
+<li>常规流块盒若外边距无缝相邻，则进行外边距合并</li>
+<li>常规流块盒的自动高度和摆放位置，无视浮动元素(绝对/固定定位元素)</li>
+</ul>
+</li>
+</ul>
+<h4 id="（2）独立的渲染区域"><a href="#（2）独立的渲染区域" class="headerlink" title="（2）独立的渲染区域"></a>（2）独立的渲染区域</h4><ul>
+<li>BFC渲染区域：由某个HTML元素创建，以下元素会在其内部创建BFC区域<ul>
+<li>浮动元素</li>
+<li>绝对/固定定位元素</li>
+<li>overflow值不等于visible的元素</li>
+</ul>
+</li>
+<li>独立的：不同的BFC区域，他们进行渲染时互不干扰<ul>
+<li>创建BFC的元素，隔绝了其内部与外部的联系</li>
+<li>创建BFC的元素，它的自动高度需要计算浮动元素</li>
+<li>创建BFC的元素，它的边框盒不会与浮动元素重叠（创建BFC的元素排列时会避开浮动元素）</li>
+<li>创建BFC的元素，不会和子元素发生外边距合并（只有处于同一BFC中的元素才会发生外边距合并）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-堆叠上下文"><a href="#4-堆叠上下文" class="headerlink" title="4.堆叠上下文"></a>4.堆叠上下文</h3><h4 id="（1）stack-context"><a href="#（1）stack-context" class="headerlink" title="（1）stack context"></a>（1）stack context</h4><ul>
+<li>它是一块区域，这块区域由某个元素创建，规定了该区域中的内容在Z轴上排列的先后顺序</li>
+<li>会创建堆叠上下文的元素<ul>
+<li>HTML元素</li>
+<li>z-index不为auto默认值的元素</li>
+</ul>
+</li>
+</ul>
+<h4 id="（2）同一个堆叠上下文中元素在Z轴上的排列顺序"><a href="#（2）同一个堆叠上下文中元素在Z轴上的排列顺序" class="headerlink" title="（2）同一个堆叠上下文中元素在Z轴上的排列顺序"></a>（2）同一个堆叠上下文中元素在Z轴上的排列顺序</h4><ul>
+<li>1）创建堆叠上下文的元素的背景和边框</li>
+<li>2）堆叠级别为负值的堆叠上下文</li>
+<li>3）常规流非定位的块盒</li>
+<li>4）非定位的浮动盒子</li>
+<li>5）常规流非定位的行盒</li>
+<li>6）z-index为auto的定位元素，以及z-index为0的堆叠上下文</li>
+<li>7）堆叠级别为正值的堆叠上下文</li>
+</ul>
+<hr>
+<h3 id="5-参考线"><a href="#5-参考线" class="headerlink" title="5.参考线"></a>5.参考线</h3><h4 id="（1）font-family"><a href="#（1）font-family" class="headerlink" title="（1）font-family"></a>（1）font-family</h4><ul>
+<li>文字是通过一些文字制作软件制作出来的</li>
+<li>文字在制作时就有几条参考线，不同类型文字参考线不同</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">参考线</th>
+<th align="center">名称</th>
+<th align="center">别称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">虚拟区顶线</td>
+<td align="center">top</td>
+<td align="center">——</td>
+</tr>
+<tr>
+<td align="center">顶线</td>
+<td align="center">text top</td>
+<td align="center">ascent</td>
+</tr>
+<tr>
+<td align="center">上基线</td>
+<td align="center">super</td>
+<td align="center">——</td>
+</tr>
+<tr>
+<td align="center">基线</td>
+<td align="center">baseline</td>
+<td align="center">——</td>
+</tr>
+<tr>
+<td align="center">下基线</td>
+<td align="center">sub</td>
+<td align="center">——</td>
+</tr>
+<tr>
+<td align="center">底线</td>
+<td align="center">text bottom</td>
+<td align="center">descent</td>
+</tr>
+<tr>
+<td align="center">虚拟区底线</td>
+<td align="center">bottom</td>
+<td align="center">——</td>
+</tr>
+</tbody></table>
+<h4 id="（2）font-size"><a href="#（2）font-size" class="headerlink" title="（2）font-size"></a>（2）font-size</h4><ul>
+<li>设置的字体大小，是文字的相对大小（文字的相对大小：1000/2048/1024/）</li>
+<li>文字顶线到底线的大小（text top到text bottom），是文字的实际大小（content-area内容区）</li>
+<li>文字实际大小通常比设置大小要大</li>
+</ul>
+<h4 id="（3）line-height"><a href="#（3）line-height" class="headerlink" title="（3）line-height"></a>（3）line-height</h4><ul>
+<li>顶线向上延伸一段空间，底线向下延伸一段空间，两段空间相等，该空间叫做gap（空隙）</li>
+<li>top到bottom的距离是行高（virtual-area虚拟区）</li>
+<li>line-height：<ul>
+<li>设置为1（不太合理，文字实际大小通常比设置大小要大）</li>
+<li>normal 使用默认值（0）</li>
+</ul>
+</li>
+<li>文字一定出现在一行的正中间（错），取决于文字设计</li>
+<li>content-area一定出现在virtual-area正中间（对）</li>
+</ul>
+<h4 id="（4）vertical-align"><a href="#（4）vertical-align" class="headerlink" title="（4）vertical-align"></a>（4）vertical-align</h4><ul>
+<li>块盒内部有行盒子元素，也会生成参考线（font-family、font-size、line-height）</li>
+<li><strong>预设值</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">取值</th>
+<th align="right">本元素</th>
+<th align="center">对齐</th>
+<th align="left">父元素</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">baseline：</td>
+<td align="right">baseline</td>
+<td align="center">——</td>
+<td align="left">baseline</td>
+</tr>
+<tr>
+<td align="left">super：</td>
+<td align="right">baseline</td>
+<td align="center">——</td>
+<td align="left">super</td>
+</tr>
+<tr>
+<td align="left">sub：</td>
+<td align="right">baseline</td>
+<td align="center">——</td>
+<td align="left">sub</td>
+</tr>
+<tr>
+<td align="left">text-top：</td>
+<td align="right">top</td>
+<td align="center">——</td>
+<td align="left">text-top</td>
+</tr>
+<tr>
+<td align="left">text-bottom：</td>
+<td align="right">bottom</td>
+<td align="center">——</td>
+<td align="left">text-bottom</td>
+</tr>
+<tr>
+<td align="left">top：</td>
+<td align="right">top</td>
+<td align="center">——</td>
+<td align="left">该行最高text-top</td>
+</tr>
+<tr>
+<td align="left">bottom：</td>
+<td align="right">bottom</td>
+<td align="center">——</td>
+<td align="left">该行最低text-bottom</td>
+</tr>
+<tr>
+<td align="left">middle：</td>
+<td align="right">中线</td>
+<td align="center">——</td>
+<td align="left">X字母的一半位置</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>数值</strong>：相对于基线的偏移量，上为正数，下为负数</li>
+<li><strong>百分比</strong>： 相对于基线的偏移量（取值相对于自身virtual-area的高度）</li>
+</ul>
+<h4 id="（5）line-box"><a href="#（5）line-box" class="headerlink" title="（5）line-box"></a>（5）line-box</h4><ul>
+<li>行框：承载文字内容的必要条件</li>
+<li>确定元素的自动高度</li>
+<li>==不生成行框==：<ul>
+<li>某元素内没有任何行盒</li>
+<li>某元素字体大小为0</li>
+</ul>
+</li>
+</ul>
+<h4 id="（6）可替换元素的参考线"><a href="#（6）可替换元素的参考线" class="headerlink" title="（6）可替换元素的参考线"></a>（6）可替换元素的参考线</h4><ul>
+<li>图片的基线：下外边距位置</li>
+<li>表单元素的基线：内容的底边</li>
+</ul>
+<h4 id="（7）行块盒的参考线"><a href="#（7）行块盒的参考线" class="headerlink" title="（7）行块盒的参考线"></a>（7）行块盒的参考线</h4><ul>
+<li>最后一行有行盒：最后一行的基线</li>
+<li>最后一行无行盒：下外边距位置</li>
+</ul>
+<hr>
+<h2 id="（五）文字"><a href="#（五）文字" class="headerlink" title="（五）文字"></a>（五）文字</h2><h3 id="1-自定义字体"><a href="#1-自定义字体" class="headerlink" title="1.自定义字体"></a>1.自定义字体</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  &lt;<span class="selector-tag">style</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    @<span class="keyword">font-face</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-family</span>: <span class="string">"hu"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">"./font/造字工房映力黑规体.otf"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="selector-tag">p</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-family</span>: <span class="string">"hu"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-size</span>: <span class="number">50px</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">  &lt;/style&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&lt;/head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">  &lt;p&gt;永夜将至，吾于今开始守候！&lt;/p&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&lt;/body&gt;</span></pre></td></tr></table></figure>
+<hr>
+<h3 id="2-阿里巴巴字体图标库"><a href="#2-阿里巴巴字体图标库" class="headerlink" title="2.阿里巴巴字体图标库"></a>2.阿里巴巴字体图标库</h3><h4 id="（1）font-class"><a href="#（1）font-class" class="headerlink" title="（1）font class"></a>（1）font class</h4><ul>
+<li><p>在线</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  &lt;link rel="stylesheet" href="//at.alicdn.com/t/font_1352461_0pmps1ixdezd.css"&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  &lt;<span class="selector-tag">style</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="selector-class">.iconfont</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-size</span>: <span class="number">50px</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">color</span>: gold;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  &lt;/style&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&lt;/head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">  &lt;i class="iconfont icon-RectangleCopy6"&gt;&lt;/i&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&lt;/body&gt;</span></pre></td></tr></table></figure>
+</li>
+<li><p>离线</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  &lt;link rel="stylesheet" href="./font/iconfont.css"&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  &lt;<span class="selector-tag">style</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="selector-class">.iconfont</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-size</span>: <span class="number">50px</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">color</span>: gold;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  &lt;/style&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&lt;/head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">  &lt;i class="iconfont icon-RectangleCopy6"&gt;&lt;/i&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&lt;/body&gt;</span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="（2）Unicode"><a href="#（2）Unicode" class="headerlink" title="（2）Unicode"></a>（2）Unicode</h4><ul>
+<li><p>在线</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    &lt;<span class="selector-tag">style</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    @<span class="keyword">font-face</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-family</span>: <span class="string">'iconfont'</span>;  <span class="comment">/* project id 1352461 */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'//at.alicdn.com/t/font_1352461_0pmps1ixdezd.eot'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'//at.alicdn.com/t/font_1352461_0pmps1ixdezd.eot?#iefix'</span>) <span class="built_in">format</span>(<span class="string">'embedded-opentype'</span>),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">      <span class="built_in">url</span>(<span class="string">'//at.alicdn.com/t/font_1352461_0pmps1ixdezd.woff2'</span>) <span class="built_in">format</span>(<span class="string">'woff2'</span>),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">      <span class="built_in">url</span>(<span class="string">'//at.alicdn.com/t/font_1352461_0pmps1ixdezd.woff'</span>) <span class="built_in">format</span>(<span class="string">'woff'</span>),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">      <span class="built_in">url</span>(<span class="string">'//at.alicdn.com/t/font_1352461_0pmps1ixdezd.ttf'</span>) <span class="built_in">format</span>(<span class="string">'truetype'</span>),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">      <span class="built_in">url</span>(<span class="string">'//at.alicdn.com/t/font_1352461_0pmps1ixdezd.svg#iconfont'</span>) <span class="built_in">format</span>(<span class="string">'svg'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    <span class="selector-tag">i</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-family</span>: <span class="string">"iconfont"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-style</span>: normal;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-size</span>: <span class="number">50px</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">color</span>: black;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">  &lt;/style&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">&lt;/head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">  &lt;i&gt;&amp;#xe6a9;&lt;/i&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">&lt;/body&gt;</span></pre></td></tr></table></figure>
+</li>
+<li><p>离线</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"> &lt;<span class="selector-tag">style</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    @<span class="keyword">font-face</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-family</span>: <span class="string">'iconfont'</span>;  <span class="comment">/* project id 1352461 */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      <span class="comment">/* src: url('//at.alicdn.com/t/font_1352461_0pmps1ixdezd.eot');</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment">      src: url('//at.alicdn.com/t/font_1352461_0pmps1ixdezd.eot?#iefix') format('embedded-opentype'),</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">      url('//at.alicdn.com/t/font_1352461_0pmps1ixdezd.woff2') format('woff2'),</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment">      url('//at.alicdn.com/t/font_1352461_0pmps1ixdezd.woff') format('woff'),</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="comment">      url('//at.alicdn.com/t/font_1352461_0pmps1ixdezd.ttf') format('truetype'),</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="comment">      url('//at.alicdn.com/t/font_1352461_0pmps1ixdezd.svg#iconfont') format('svg'); */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'./font_unicode/iconfont.eot'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'./font_unicode/iconfont.eot?#iefix'</span>) <span class="built_in">format</span>(<span class="string">'embedded-opentype'</span>),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">      <span class="built_in">url</span>(<span class="string">'./font_unicode/iconfont.woff2'</span>) <span class="built_in">format</span>(<span class="string">'woff2'</span>),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">      <span class="built_in">url</span>(<span class="string">'./font_unicode/iconfont.woff'</span>) <span class="built_in">format</span>(<span class="string">'woff'</span>),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">      <span class="built_in">url</span>(<span class="string">'./font_unicode/iconfont.ttf'</span>) <span class="built_in">format</span>(<span class="string">'truetype'</span>),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">      <span class="built_in">url</span>(<span class="string">'./font_unicode/iconfont.svg#iconfont'</span>) <span class="built_in">format</span>(<span class="string">'svg'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    <span class="selector-tag">i</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-family</span>: <span class="string">"iconfont"</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-style</span>: normal;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">font-size</span>: <span class="number">50px</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">      <span class="attribute">color</span>: black;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">  &lt;/style&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">&lt;/head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">  &lt;i&gt;&amp;#xe6a1;&lt;/i&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">&lt;/body&gt;</span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-单行文本溢出固定处理方式"><a href="#3-单行文本溢出固定处理方式" class="headerlink" title="3.单行文本溢出固定处理方式"></a>3.单行文本溢出固定处理方式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">width</span>:<span class="number">200px</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">white-space</span>: nowrap;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">overflow</span>: hidden;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">text-overflow</span>: ellipsis;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="4-行高"><a href="#4-行高" class="headerlink" title="4.行高"></a>4.行高</h3><ul>
+<li>可以被继承，一般统一设置</li>
+<li>固定值（px）固定不好</li>
+<li>相对值（em）先计算像素值，再继承</li>
+<li>百分比（%）相当于em</li>
+<li>倍数（n）先继承，再计算</li>
+</ul>
+<hr>
+<h2 id="（六）背景"><a href="#（六）背景" class="headerlink" title="（六）背景"></a>（六）背景</h2><h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><h4 id="（1）与img区别"><a href="#（1）与img区别" class="headerlink" title="（1）与img区别"></a>（1）与img区别</h4><ul>
+<li>img属于HTML范畴，属于网页内容结构</li>
+<li>background属于css范畴，仅用于美化装饰</li>
+</ul>
+<h4 id="（2）应用"><a href="#（2）应用" class="headerlink" title="（2）应用"></a>（2）应用</h4><ul>
+<li>background-color背景色</li>
+<li>background-image背景图片</li>
+<li>background-repeat背景重复</li>
+<li>background-size背景尺寸<ul>
+<li>auto 图片默认大小</li>
+<li>contain 图片比例不变，并且完整显示</li>
+<li>cover 图片比例不变， 并且撑满盒子</li>
+<li>数值/百分比</li>
+</ul>
+</li>
+<li>background-position背景位置<ul>
+<li>left/bottom/right/top预设值</li>
+<li>数值/百分比</li>
+<li><font color=red>雪碧图</font></li>
+</ul>
+</li>
+<li>background-attachment背景图固定<ul>
+<li>fixed 相对于视口固定</li>
+</ul>
+</li>
+<li>背景图与背景色混用（背景图在上层）</li>
+</ul>
+<hr>
+<h3 id="2-body背景"><a href="#2-body背景" class="headerlink" title="2.body背景"></a>2.body背景</h3><h5 id="（1）画布-canvas"><a href="#（1）画布-canvas" class="headerlink" title="（1）画布 canvas"></a>（1）画布 canvas</h5><ul>
+<li>一块区域</li>
+<li>最小宽度为视口宽度</li>
+<li>最小高度为视口高度</li>
+</ul>
+<h5 id="（2）背景颜色"><a href="#（2）背景颜色" class="headerlink" title="（2）背景颜色"></a>（2）背景颜色</h5><ul>
+<li><p>HTML元素背景 </p>
+<ul>
+<li>覆盖画布（普通元素覆盖边框盒）</li>
+</ul>
+</li>
+<li><p>body元素背景</p>
+<ul>
+<li>HTML元素有背景，body元素背景覆盖边框盒</li>
+<li>HTML元素无背景，body元素背景覆盖画布</li>
+</ul>
+</li>
+</ul>
+<h5 id="（3）背景图片"><a href="#（3）背景图片" class="headerlink" title="（3）背景图片"></a>（3）背景图片</h5><ul>
+<li>覆盖区域与背景颜色一致</li>
+<li>画布背景图的宽度百分比相对于视口（画布背景色是相对于画布）</li>
+<li>画布背景图的高度百分比相对于网页（HTML元素高度）</li>
+<li>画布背景图的水平位置相对于视口</li>
+<li>画布背景图的垂直位置相对于网页</li>
+</ul>
+<hr>
+
+      
+      <!-- 打赏 -->
+      
+        <div id="reward-btn">
+          打赏
+        </div>
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huafuhub.github.io/blog/2020/01/02/CSS2a/" data-id="ck53qz2cr000brksu2p3v881y"
+        class="article-share-link">分享</a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/blog/2020/01/02/CSS2b/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            CSS --- 兼容篇
+          
+        </div>
+      </a>
+    
+    
+      <a href="/blog/2020/01/01/HTML5b/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">HTML5 --- 应用篇</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        notify: false,
+        verify: false,
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        Huafu Li
+      </li>
+      <li>
+        
+          Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="http://localhost:4000/blog/mouse.svg" alt="Huafu"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/pictures">相册</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/blog/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      <script src="/blog/js/jquery-2.0.3.min.js"></script>
+<script src="/blog/js/jquery.justifiedGallery.min.js"></script>
+<script src="/blog/js/lazyload.min.js"></script>
+<script src="/blog/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/blog/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+			onClick: (e) => {
+      	document.getElementById(e.target.innerText).scrollIntoView()
+      	return false;
+    	}
+    });
+  </script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+<script src="/blog/js/ayer.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    NET --- 概述篇 |  Huafu
+  </title>
+  
+  <link rel="shortcut icon" href="http://localhost:4000/blog/favicon.ico" />
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  <script src="/blog/js/pace.min.js"></script>
+
+  
+
+  
+
+<link rel="alternate" href="/blog/atom.xml" title="Huafu" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-NETa" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  NET --- 概述篇
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/blog/2020/01/05/NETa/" class="article-date">
+  <time datetime="2020-01-04T16:00:00.000Z" itemprop="datePublished">2020-01-05</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h1 id="一、网络起源"><a href="#一、网络起源" class="headerlink" title="一、网络起源"></a>一、网络起源</h1><ul>
+<li>起源于1969年，加利福尼亚大学洛杉矶分校+斯坦福大学+加利福尼亚大学+犹他州大学</li>
+<li>互联网：internet（因特网、英特网）， 网际网路</li>
+<li>1989年，欧洲物理研究所：协议（格式）</li>
+<li>WWW（World Wide Web）：万维网</li>
+</ul>
+<h1 id="二、计算机之父（冯诺依曼）"><a href="#二、计算机之父（冯诺依曼）" class="headerlink" title="二、计算机之父（冯诺依曼）"></a>二、计算机之父（冯诺依曼）</h1><ul>
+<li>运算器： CPU、GPU</li>
+<li>存储器： 内存、硬盘</li>
+<li>控制器： 主板</li>
+<li>输入设备： 键盘、鼠标、麦克风、网口</li>
+<li>输出设备： 显示器、耳机、网口</li>
+</ul>
+<h1 id="三、IP地址"><a href="#三、IP地址" class="headerlink" title="三、IP地址"></a>三、IP地址</h1><h3 id="1-局域网"><a href="#1-局域网" class="headerlink" title="1.局域网"></a>1.局域网</h3><h3 id="2-公网"><a href="#2-公网" class="headerlink" title="2.公网"></a>2.公网</h3><h3 id="3-路由器"><a href="#3-路由器" class="headerlink" title="3.路由器"></a>3.路由器</h3><h3 id="4-IP地址格式"><a href="#4-IP地址格式" class="headerlink" title="4.IP地址格式"></a>4.IP地址格式</h3><ul>
+<li>四段：xxx.xxx.xxx.xxx 每个段0-255</li>
+<li>五类：A-E类<ul>
+<li>A类：0.0.0.0 - 127.255.255.255</li>
+<li>B类：128.0.0.0 - 191.255.255.255</li>
+<li>C类：192.0.0.0 - 223.255.255.255<h3 id="5-域名与DNS解析"><a href="#5-域名与DNS解析" class="headerlink" title="5.域名与DNS解析"></a>5.域名与DNS解析</h3>==当向浏览器地址栏中输入一个Url按回车后，网络中都会发生什么？==<br>（1）看浏览器的缓存<br>（2）看本机host（C:windows/system32/drivers/etc/host）<ul>
+<li>域名：localhost ==&gt;&gt; 127.0.0.1（本机）</li>
+<li>域名：不认识 ==&gt;&gt; 0.0.0.0（默认打到本机）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>（3）家里的路由器<br>（4）上级路由、城市路由LDNS服务器<br>（5）继续向上级的DNS服务器找、GDNS服务器</p>
+<h1 id="四、网络模型"><a href="#四、网络模型" class="headerlink" title="四、网络模型"></a>四、网络模型</h1><h2 id="（一）分类"><a href="#（一）分类" class="headerlink" title="（一）分类"></a>（一）分类</h2><h3 id="1-物理层"><a href="#1-物理层" class="headerlink" title="1.物理层"></a>1.物理层</h3><ul>
+<li>高/低电平（二进制）<h3 id="2-数据链路层"><a href="#2-数据链路层" class="headerlink" title="2.数据链路层"></a>2.数据链路层</h3></li>
+<li>mac地址<h3 id="3-网络层"><a href="#3-网络层" class="headerlink" title="3.网络层"></a>3.网络层</h3></li>
+<li>IP协议<h3 id="4-运输层"><a href="#4-运输层" class="headerlink" title="4.运输层"></a>4.运输层</h3></li>
+<li>TCP协议</li>
+<li>UDP协议<h3 id="5-应用层"><a href="#5-应用层" class="headerlink" title="5.应用层"></a>5.应用层</h3><ul>
+<li>DNS协议</li>
+<li>HTTP协议</li>
+</ul>
+</li>
+</ul>
+<h2 id="（二）HTTP协议"><a href="#（二）HTTP协议" class="headerlink" title="（二）HTTP协议"></a>（二）HTTP协议</h2><h3 id="1-请求Request"><a href="#1-请求Request" class="headerlink" title="1.请求Request"></a>1.请求Request</h3><ul>
+<li>请求头</li>
+<li>数据体</li>
+<li>第一行：请求方式 URL 协议版本</li>
+</ul>
+<h4 id="1-GET请求"><a href="#1-GET请求" class="headerlink" title="1) GET请求"></a>1) GET请求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">GET &#x2F; HTTP&#x2F;1.1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Host: www.baidu.com</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">Connection: keep-alive</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">Upgrade-Insecure-Requests: 1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">User-Agent: Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;77.0.3865.90 Safari&#x2F;537.36</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">Sec-Fetch-Mode: navigate</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">Sec-Fetch-User: ?1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">Accept: text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,image&#x2F;webp,image&#x2F;apng,*&#x2F;*;q&#x3D;0.8,application&#x2F;signed-exchange;v&#x3D;b3</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">Sec-Fetch-Site: none</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">Accept-Encoding: gzip, deflate, br</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">Accept-Language: zh-CN,zh;q&#x3D;0.9</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">Cookie:</span></pre></td></tr></table></figure>
+<ul>
+<li>GET /path?==数据信息== HTTP1.1</li>
+<li>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></li>
+<li>Connection: keep-alive</li>
+<li>User-Agent: </li>
+</ul>
+<h4 id="2-POST请求"><a href="#2-POST请求" class="headerlink" title="2) POST请求"></a>2) POST请求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">:authority: ratewrite.tmall.com</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">:method: POST</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">:path: &#x2F;rateWriteResult.htm</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">:scheme: https</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">accept: text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,image&#x2F;webp,image&#x2F;apng,*&#x2F;*;q&#x3D;0.8,application&#x2F;signed-exchange;v&#x3D;b3</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">accept-encoding: gzip, deflate, br</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">accept-language: zh-CN,zh;q&#x3D;0.9</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">cache-control: max-age&#x3D;0</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">content-length: 2351</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">content-type: application&#x2F;x-www-form-urlencoded</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">cookie: </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">origin: https:&#x2F;&#x2F;ratewrite.tmall.com</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">referer: https:&#x2F;&#x2F;ratewrite.tmall.com&#x2F;rate_detail.htm?trade_id&#x3D;697224451467453543</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">sec-fetch-mode: nested-navigate</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">sec-fetch-site: same-origin</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">sec-fetch-user: ?1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">upgrade-insecure-requests: 1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">user-agent: Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;77.0.3865.90 Safari&#x2F;537.36</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">callback: RateWriteCallback401</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">qualityContent697224451467453543: 效果并没有描述那么好，功能也是</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">serviceContent697224451467453543: 服务不错</span></pre></td></tr></table></figure>
+<ul>
+<li>POST /path HTTP1.1</li>
+<li>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></li>
+<li>Connection: keep-alive</li>
+<li>User-Agent: </li>
+<li></li>
+<li>==数据信息==</li>
+</ul>
+<h3 id="2-响应Response"><a href="#2-响应Response" class="headerlink" title="2.响应Response"></a>2.响应Response</h3><ul>
+<li>响应头</li>
+<li>数据体</li>
+<li>第一行：协议版本 状态码 massage</li>
+</ul>
+<h3 id="3-GET-与-POST的区别？"><a href="#3-GET-与-POST的区别？" class="headerlink" title="3.GET 与 POST的区别？"></a>3.GET 与 POST的区别？</h3><ul>
+<li>没有基于什么前提，不使用任何规范，只考虑语法和理论上的HTTP协议：没有区别，只是名字不一样</li>
+<li>基于RFC规范：<ul>
+<li>理论上： GET和POST具有相同的语法，不同的语义，GET用于获取数据，POST用于发送数据</li>
+<li>实现上：各浏览器是规范的实现者，才有常见的不同<ul>
+<li>GET的数据在url中可见（url不一定显示在地址栏中），POST请求不显示在url中</li>
+<li>GET对数据长度有限制，POST对数据长度没有限制</li>
+<li>GET请求的数据可以收藏为书签，POST不可收藏为书签</li>
+<li>GET请求的后、按后退按钮、刷新按钮无影响，POST则会被重新提交</li>
+<li>GET编码类型：application/x-www-form-url,POST编码类型有很多种</li>
+<li>GET只允许ASCII，POST没有编码限制、允许发送二进制数据</li>
+<li>GET历史参数会被保留在浏览器里，POST不会存在浏览器中</li>
+<li>GET与POST相比，安全性较差，应为数据会展示在url中</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="五、浏览器缓存"><a href="#五、浏览器缓存" class="headerlink" title="五、浏览器缓存"></a>五、浏览器缓存</h1><h2 id="（一）Cookies"><a href="#（一）Cookies" class="headerlink" title="（一）Cookies"></a>（一）Cookies</h2><h3 id="1-特点"><a href="#1-特点" class="headerlink" title="1.特点"></a>1.特点</h3><ul>
+<li>Cookie是有限制的</li>
+<li>Cookie是存在浏览器里的，不是存在某个页面上</li>
+<li>Cookie是可以长期存储的</li>
+<li>Cookie是存在不同域名下的<h3 id="2-缺陷"><a href="#2-缺陷" class="headerlink" title="2.缺陷"></a>2.缺陷</h3></li>
+<li>浏览器里的Cookie容易被复制，不安全</li>
+</ul>
+<h2 id="（二）Session"><a href="#（二）Session" class="headerlink" title="（二）Session"></a>（二）Session</h2><h3 id="1-特点-1"><a href="#1-特点-1" class="headerlink" title="1.特点"></a>1.特点</h3><ul>
+<li>Session是存在服务器里的</li>
+<li>服务器里的Session相对安全</li>
+</ul>
+<h3 id="2-缺陷-1"><a href="#2-缺陷-1" class="headerlink" title="2.缺陷"></a>2.缺陷</h3><ul>
+<li>用户量比较大的话，服务器很耗费资源</li>
+<li>服务器不止一台，Session一般只会存在某台服务器上，反向代理需要轮询</li>
+</ul>
+<h1 id="六、本地服务器"><a href="#六、本地服务器" class="headerlink" title="六、本地服务器"></a>六、本地服务器</h1><h2 id="（一）结构"><a href="#（一）结构" class="headerlink" title="（一）结构"></a>（一）结构</h2><h3 id="1-CS结构"><a href="#1-CS结构" class="headerlink" title="1.CS结构"></a>1.CS结构</h3><ul>
+<li>（Client负责展示内容，Server负责提供内容）<h3 id="2-BS结构"><a href="#2-BS结构" class="headerlink" title="2.BS结构"></a>2.BS结构</h3></li>
+<li>（Browser负责展示内容，Server负责提供内容）</li>
+<li>页面的本质就是一个带有HTML格式的字符串</li>
+</ul>
+<h2 id="（二）服务器"><a href="#（二）服务器" class="headerlink" title="（二）服务器"></a>（二）服务器</h2><ul>
+<li>严格的说，服务器是一台计算机， 这台计算机只提供服务（不是用户用的）</li>
+<li>常说的服务器是服务容器（一个程序），不是服务器<ul>
+<li>程序可以监听一个端口</li>
+<li>读取文件并且返回</li>
+</ul>
+</li>
+</ul>
+<h1 id="七、网络请求"><a href="#七、网络请求" class="headerlink" title="七、网络请求"></a>七、网络请求</h1><h2 id="（一）发送请求的方式"><a href="#（一）发送请求的方式" class="headerlink" title="（一）发送请求的方式"></a>（一）发送请求的方式</h2><ul>
+<li>地址栏输入网址url;（==无法用代码控制==）</li>
+<li>location.href = “url”; 可以发出网络请求，但页面会发生跳转（==页面会跳转==）</li>
+<li>带有src属性的标签，可以发送请求，服务端是可以处理的，返回的数据能否应用，取决于浏览器（==页面无法处理数据==）</li>
+<li>带有href属性的标签，可以发送请求，服务端是可以处理的，返回的数据能否应用，取决于浏览器（==页面无法处理数据==）</li>
+<li>带有action属性的标签，可以发出网络请求，但页面会发生跳转（==页面会跳转==）</li>
+<li><strong>ajax请求</strong></li>
+</ul>
+<h2 id="（二）Ajax"><a href="#（二）Ajax" class="headerlink" title="（二）Ajax"></a>（二）Ajax</h2><ul>
+<li>请求方式</li>
+<li>请求地址url</li>
+<li>数据<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="built_in">window</span>.XMLHttpRequest ? <span class="keyword">new</span> XMLHttpRequest() : <span class="keyword">new</span> ActiveObject(<span class="string">"Microsoft.XMLHttp"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(xhr.readyState); <span class="comment">//0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">xhr.open(<span class="string">"GET"</span>, <span class="string">"http://developer.duyiedu.com/edu/testAjaxCrossOrigin"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(xhr.readyState); <span class="comment">//1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="built_in">console</span>.log(xhr.readyState); <span class="comment">//2 3 4</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span> &amp;&amp; xhr.status === <span class="number">200</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    oP.innerText = <span class="built_in">JSON</span>.parse(xhr.responseText).msg; <span class="comment">//数据</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">xhr.send();</span></pre></td></tr></table></figure></li>
+<li>==先绑定事件，再发送==</li>
+<li>open(type, url, sync, )<ul>
+<li>type请求方式</li>
+<li>url请求地址</li>
+<li>sync默认true异步</li>
+</ul>
+</li>
+</ul>
+<h2 id="（三）跨域"><a href="#（三）跨域" class="headerlink" title="（三）跨域"></a>（三）跨域</h2><h3 id="1-哪些资源允许跨域请求？"><a href="#1-哪些资源允许跨域请求？" class="headerlink" title="1.哪些资源允许跨域请求？"></a>1.哪些资源允许跨域请求？</h3><ul>
+<li>js、css、图片</li>
+<li>src属性的资源</li>
+<li>href属性的大部分资源</li>
+</ul>
+<h3 id="2-哪些资源不允许跨域请求？"><a href="#2-哪些资源不允许跨域请求？" class="headerlink" title="2.哪些资源不允许跨域请求？"></a>2.哪些资源不允许跨域请求？</h3><ul>
+<li>后端接口的数据</li>
+<li>其它域的Cookie</li>
+<li>其它域的缓存</li>
+</ul>
+<h3 id="3-怎么样算跨域？"><a href="#3-怎么样算跨域？" class="headerlink" title="3.怎么样算跨域？"></a>3.怎么样算跨域？</h3><ul>
+<li>页面本身：有协议、域名、端口（默认端口号80）</li>
+<li>请求数据：<a href="http://www.baidu.com:80" target="_blank" rel="noopener">http://www.baidu.com:80</a></li>
+<li>协议、域名、端口有任何一个不一样就算跨域</li>
+</ul>
+<h3 id="4-跨域发生在哪个阶段？"><a href="#4-跨域发生在哪个阶段？" class="headerlink" title="4.跨域发生在哪个阶段？"></a>4.跨域发生在哪个阶段？</h3><ul>
+<li>即使跨域了，请求也可以发出的</li>
+<li>服务器可以正常接收的</li>
+<li>服务器可以正常处理的</li>
+<li>服务器可以正常返回数据的</li>
+<li>浏览器可以正常接收数据的</li>
+<li>我们的代码在等待结果，当应为浏览器判定跨域了，不会把结果传递给代码</li>
+</ul>
+<h3 id="5-虽然跨域了，我们依然需要这个数据怎么办？"><a href="#5-虽然跨域了，我们依然需要这个数据怎么办？" class="headerlink" title="5.虽然跨域了，我们依然需要这个数据怎么办？"></a>5.虽然跨域了，我们依然需要这个数据怎么办？</h3><h4 id="1）-后端配合进行跨域"><a href="#1）-后端配合进行跨域" class="headerlink" title="1） 后端配合进行跨域"></a>1） 后端配合进行跨域</h4><ul>
+<li>JSONP（JSON格式的数据）</li>
+<li>后端设置Access-Control-Allow-Origin属性支持跨域</li>
+</ul>
+<h4 id="2）-后端不配合进行跨域"><a href="#2）-后端不配合进行跨域" class="headerlink" title="2） 后端不配合进行跨域"></a>2） 后端不配合进行跨域</h4><ul>
+<li>iframe（只能显示，不能控制）</li>
+<li>通过自己的后端代理</li>
+</ul>
+<h3 id="6-JSONP跨域"><a href="#6-JSONP跨域" class="headerlink" title="6.JSONP跨域"></a>6.JSONP跨域</h3><ul>
+<li>只能使用GET方式（jQuery中使用POST会自动转为GET）</li>
+<li>jQuery有判断是否同源的机制，如果同源则正常发送ajax，如果不同源则使用GET方式</li>
+<li>src属性的资源不受跨域限制</li>
+<li>script标签请求的资源会当做js代码执行</li>
+<li><strong>jQuery中JSONP原理</strong><ul>
+<li>判断请求与当前页面是否同源，如果同源则正常发送ajax，就不存在跨域</li>
+<li>如果不同源，则生成一个script标签</li>
+<li>生成一个随机的callback名字</li>
+<li>设置script标签的src设置为请求的接口</li>
+<li>将callback作为参数拼接在url后面</li>
+<li>后端接收到请求后，开始准备要返回的数据</li>
+<li>后端拼接数据</li>
+<li>将内容返回</li>
+<li>浏览器接收到内容当做js代码执行</li>
+<li>相当于执行了callback将数据作为参数传递了进去<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myJSONP</span>(<span class="params">obj</span>)</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> url = obj.url.toLowerCase();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> type = obj.type.toLowerCase();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> dataType = obj.dataType.toLowerCase();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//判断是否同源</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> targetProtocol = <span class="string">""</span>;<span class="comment">//协议</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">var</span> targetHost = <span class="string">""</span>;<span class="comment">//域名与端口</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//判断请求是绝对路径还是相对路径，如果是相对路径则一定是同源</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span>(url.includes(<span class="string">"http://"</span>) || url.includes(<span class="string">"https://"</span>))&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> targetUrl = <span class="keyword">new</span> URL(url);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    targetProtocol = targetUrl.protocol;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    targetHost = targetUrl.host;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">  &#125;<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    targetProtocol = location.protocol;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    targetHost = location.host;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//判断是否为jsonp, 如果不是则正常发送ajax</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span>(dataType === <span class="string">"jsonp"</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">//判断是否同源，如果同源就不用跨域</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span>(location.protocol === targetProtocol &amp;&amp; location.host === targetHost)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">      <span class="comment">//正常ajax请求</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">    &#125;<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">      <span class="comment">//jsonp跨域</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">      <span class="comment">//生成一个script标签</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">      <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">      <span class="comment">//生成一个随机的callback名</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">      <span class="keyword">var</span> callback = <span class="string">"cb"</span> + <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*<span class="number">1000000</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">      <span class="built_in">window</span>[callback] = obj.success;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">      <span class="comment">//设置script标签的src属性为请求的接口</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">      <span class="keyword">if</span>(url.includes(<span class="string">"?"</span>))&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">        script.src = url + <span class="string">"&amp;callback="</span> + callback;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">      &#125;<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">        script.src = url + <span class="string">"?callback="</span> + callback;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">      &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">      <span class="built_in">document</span>.head.appendChild(script);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">myJSONP(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">  url: <span class="string">"http://developer.duyiedu.com/edu/testJsonp"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">  type: <span class="string">"get"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">  dataType: <span class="string">"jsonp"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">  success: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">    <span class="built_in">console</span>.log(data)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line">&#125;)</span></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+
+      
+      <!-- 打赏 -->
+      
+        <div id="reward-btn">
+          打赏
+        </div>
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huafuhub.github.io/blog/2020/01/05/NETa/" data-id="ck53qz2bl0007rksu4gpvhvue"
+        class="article-share-link">分享</a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/blog/2020/01/06/GITa/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Git --- 概述篇
+          
+        </div>
+      </a>
+    
+    
+      <a href="/blog/2020/01/04/JQUERYa-0/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">jQuery --- 应用篇</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        notify: false,
+        verify: false,
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        Huafu Li
+      </li>
+      <li>
+        
+          Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="http://localhost:4000/blog/mouse.svg" alt="Huafu"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/pictures">相册</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/blog/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      <script src="/blog/js/jquery-2.0.3.min.js"></script>
+<script src="/blog/js/jquery.justifiedGallery.min.js"></script>
+<script src="/blog/js/lazyload.min.js"></script>
+<script src="/blog/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/blog/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+			onClick: (e) => {
+      	document.getElementById(e.target.innerText).scrollIntoView()
+      	return false;
+    	}
+    });
+  </script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+<script src="/blog/js/ayer.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
+
+  </div>
+</body>
+
+</html>

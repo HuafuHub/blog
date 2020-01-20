@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    相濡与沫是佳事，相忘于江湖才是幸事！ |  Huafu
+     Huafu
   </title>
   
   <link rel="shortcut icon" href="http://localhost:4000/blog/favicon.ico" />
@@ -32,15 +32,6 @@
 
   <div class="article-inner">
     
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  相濡与沫是佳事，相忘于江湖才是幸事！
-</h1>
-  
-
-    </header>
-    
 
     
 
@@ -53,10 +44,36 @@
       
 
       
-      <p><img src="./data/duck.gif" alt="小绿鸭"></p>
-<audio id="audio" preload autoplay loop>
-  <source id="mp3" src="./data/duck.mp3">
-</audio>
+      <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>图片瀑布流</title>
+<link rel="alternate" href="/blog/atom.xml" title="Huafu" type="application/atom+xml">
+</head>
+
+<body>
+  <div class="container" style="border: 2px solid; height: 3000px;"></div>
+  <script src="./common.js"></script>
+  <script src="./waterfall.js"></script>
+  <script>
+    var config = {
+      container: document.querySelector(".container"), //图片容器
+      minGap: 10, //最小间隙
+      imgWidth: 200,//图片宽度
+      imgData: []//图片路径
+    }
+    for (var i = 1; i <= 50; i++) {
+      config.imgData.push(`./img/${i}.jpg`);
+    }
+    createWaterFall(config);
+  </script>
+</body>
+
+</html>
       
       <!-- 打赏 -->
       
@@ -66,7 +83,7 @@
         
     </div>
     <footer class="article-footer">
-      <a data-url="https://huafuhub.github.io/blog/about/index.html" data-id="ck53qz2ar0003rksu4cuk1og9"
+      <a data-url="https://huafuhub.github.io/blog/pictures/index.html" data-id="ck53qz2an0001rksu98i7absp"
         class="article-share-link">分享</a>
       
     </footer>

@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    相濡与沫是佳事，相忘于江湖才是幸事！ |  Huafu
+    Git --- 概述篇 |  Huafu
   </title>
   
   <link rel="shortcut icon" href="http://localhost:4000/blog/favicon.ico" />
@@ -27,7 +27,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="page-" class="article article-type-page" itemscope
+  <article id="post-GITa" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -35,7 +35,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  相濡与沫是佳事，相忘于江湖才是幸事！
+  Git --- 概述篇
 </h1>
   
 
@@ -43,6 +43,21 @@
     
 
     
+    <div class="article-meta">
+      <a href="/blog/2020/01/06/GITa/" class="article-date">
+  <time datetime="2020-01-05T16:00:00.000Z" itemprop="datePublished">2020-01-06</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
 
     
 
@@ -53,10 +68,114 @@
       
 
       
-      <p><img src="./data/duck.gif" alt="小绿鸭"></p>
-<audio id="audio" preload autoplay loop>
-  <source id="mp3" src="./data/duck.mp3">
-</audio>
+      <h1 id="一、分布式版本控制工具"><a href="#一、分布式版本控制工具" class="headerlink" title="一、分布式版本控制工具"></a>一、分布式版本控制工具</h1><h2 id="（一）使用"><a href="#（一）使用" class="headerlink" title="（一）使用"></a>（一）使用</h2><h3 id="1-初始化本地仓库"><a href="#1-初始化本地仓库" class="headerlink" title="1.初始化本地仓库"></a>1.初始化本地仓库</h3><blockquote>
+<p>git init</p>
+</blockquote>
+<h3 id="2-创建秘钥、查看、配置"><a href="#2-创建秘钥、查看、配置" class="headerlink" title="2.创建秘钥、查看、配置"></a>2.创建秘钥、查看、配置</h3><blockquote>
+<p>ssh-keygen<br>cd ~/.ssh<br>ls</p>
+</blockquote>
+<ul>
+<li>copy id_rsa.pub into gitHub/Settings/SSH and GPG keys/Key</li>
+</ul>
+<h3 id="3-关联远程仓库"><a href="#3-关联远程仓库" class="headerlink" title="3.关联远程仓库"></a>3.关联远程仓库</h3><blockquote>
+<p>git remote add origin <a href="https://github.com/HuafuHub/myTest.git" target="_blank" rel="noopener">https://github.com/HuafuHub/myTest.git</a></p>
+</blockquote>
+<h3 id="4-拉取远程仓库"><a href="#4-拉取远程仓库" class="headerlink" title="4.拉取远程仓库"></a>4.拉取远程仓库</h3><blockquote>
+<p>git pull –rebase origin master</p>
+</blockquote>
+<h1 id="二、常用命令"><a href="#二、常用命令" class="headerlink" title="二、常用命令"></a>二、常用命令</h1><table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">含义</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">mkdir dirname</td>
+<td align="left">创建文件夹</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">cd dirname</td>
+<td align="left">进入文件夹</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><font color=green>git init</td>
+<td align="left">创建版本库</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">ls -ah</td>
+<td align="left">查看隐藏文件</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">git config –list</td>
+<td align="left">查看配置文件</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">git config –global user.name ‘huafu’</td>
+<td align="left">配置用户名</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">git config –global user.email ‘1030363645@qq.com’</td>
+<td align="left">配置邮件地址</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">git remote add origin url</td>
+<td align="left">关联远程仓库</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">git remote rename oldname newname</td>
+<td align="left">重命名远程仓库</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">git remote -v</td>
+<td align="left">查看远程仓库地址</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">git remote</td>
+<td align="left">查看远程仓库名</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><font color=green>git status</td>
+<td align="left">查看文件状态</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><font color=green>git add <font color=red>file</td>
+<td align="left">从工作区添加至暂存区</td>
+<td align="left">单个文件</td>
+</tr>
+<tr>
+<td align="left"><font color=green>git add <strong><font color=red>.</strong></td>
+<td align="left">从工作区添加至暂存区</td>
+<td align="left">整个当前目录的文件</td>
+</tr>
+<tr>
+<td align="left"><font color=green>git commit <font color=red>-m ‘des’</td>
+<td align="left">从暂存区提交至本地仓库</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><font color=green>git checkout <font color=red>– flie</td>
+<td align="left">恢复到暂存区或本地仓库同步状态</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<img src="./git.png">
+
+
+
       
       <!-- 打赏 -->
       
@@ -66,7 +185,7 @@
         
     </div>
     <footer class="article-footer">
-      <a data-url="https://huafuhub.github.io/blog/about/index.html" data-id="ck53qz2ar0003rksu4cuk1og9"
+      <a data-url="https://huafuhub.github.io/blog/2020/01/06/GITa/" data-id="ck53qz2aq0002rksudnle8s80"
         class="article-share-link">分享</a>
       
     </footer>
@@ -75,6 +194,25 @@
 
   
   
+  <nav class="article-nav">
+    
+      <a href="/blog/2020/01/07/WEBPACKa/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Webpack --- 应用篇
+          
+        </div>
+      </a>
+    
+    
+      <a href="/blog/2020/01/05/NETa/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">NET --- 概述篇</div>
+      </a>
+    
+  </nav>
+
 
   
 
@@ -133,6 +271,8 @@
   
 
   
+  
+  
 
 </article>
 </section>
@@ -179,8 +319,8 @@
       </div>
     </main>
     
-      <aside class="sidebar">
-        
+    <aside class="sidebar">
+      
         <button class="navbar-toggle"></button>
 <nav class="navbar">
   
@@ -260,6 +400,25 @@
   <script src="/blog/fancybox/jquery.fancybox.min.js"></script>
 
 
+
+  <script src="/blog/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+			onClick: (e) => {
+      	document.getElementById(e.target.innerText).scrollIntoView()
+      	return false;
+    	}
+    });
+  </script>
 
 
 <script>

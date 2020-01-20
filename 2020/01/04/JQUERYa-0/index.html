@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    jQuery --- 应用篇 |  Huafu
+  </title>
+  
+  <link rel="shortcut icon" href="http://localhost:4000/blog/favicon.ico" />
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  <script src="/blog/js/pace.min.js"></script>
+
+  
+
+  
+
+<link rel="alternate" href="/blog/atom.xml" title="Huafu" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-JQUERYa-0" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  jQuery --- 应用篇
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/blog/2020/01/04/JQUERYa-0/" class="article-date">
+  <time datetime="2020-01-03T16:00:00.000Z" itemprop="datePublished">2020-01-04</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h1 id="一、"><a href="#一、" class="headerlink" title="一、$()"></a>一、$()</h1><h3 id="1-css-selector"><a href="#1-css-selector" class="headerlink" title="1.$(css selector)"></a>1.$(css selector)</h3><ul>
+<li>字符串</li>
+<li>css 选择器</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$(<span class="string">".wrapper ul li"</span>);</span></pre></td></tr></table></figure>
+
+<h3 id="2-jQuery-selector"><a href="#2-jQuery-selector" class="headerlink" title="2.$(jQuery selector)"></a>2.$(jQuery selector)</h3><ul>
+<li>字符串</li>
+<li>jQuery 特有选择器</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$(<span class="string">".wrapper ul li.eq(-1)"</span>);</span></pre></td></tr></table></figure>
+
+<h3 id="3-data"><a href="#3-data" class="headerlink" title="3.$(data)"></a>3.$(data)</h3><ul>
+<li>任意形式的数据</li>
+<li>容错</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$(<span class="literal">undefined</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">$(<span class="literal">null</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">$(<span class="string">""</span>);</span></pre></td></tr></table></figure>
+
+<h3 id="4-DOM"><a href="#4-DOM" class="headerlink" title="4.$(DOM)"></a>4.$(DOM)</h3><ul>
+<li>原生 dom</li>
+<li>包装</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$(<span class="keyword">this</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">$(div);</span></pre></td></tr></table></figure>
+
+<h3 id="5-fn"><a href="#5-fn" class="headerlink" title="5.$(fn)"></a>5.$(fn)</h3><ul>
+<li>函数</li>
+<li>DOMContentLoaded 事件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).read(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;);</span></pre></td></tr></table></figure>
+
+<h3 id="6-selectorSon-selectorFather"><a href="#6-selectorSon-selectorFather" class="headerlink" title="6.$(selectorSon, selectorFather)"></a>6.$(selectorSon, selectorFather)</h3><ul>
+<li>限制选择</li>
+<li>选择上下文</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$(<span class="string">".wrapper ul"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">$(<span class="string">"ul"</span>, <span class="string">".wrapper"</span>);</span></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="二、选择"><a href="#二、选择" class="headerlink" title="二、选择"></a>二、选择</h1><h2 id="（一）选择器"><a href="#（一）选择器" class="headerlink" title="（一）选择器"></a>（一）选择器</h2><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$(“*“)</td>
+<td align="left">所有元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“#lastname”)</td>
+<td align="left">id=”lastname” 的元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“p”)</td>
+<td align="left">所有 &lt;p&gt; 元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“p:first”)</td>
+<td align="left">第一个 &lt;p&gt; 元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“p:last”)</td>
+<td align="left">最后一个 &lt;p&gt; 元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“tr:even”)</td>
+<td align="left">所有偶数 &lt;tr&gt; 元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“tr:odd”)</td>
+<td align="left">所有奇数 &lt;tr&gt; 元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“ul li:eq(3)”)</td>
+<td align="left">列表中的第四个元素（index 从 0 开始）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“ul li:gt(3)”)</td>
+<td align="left">列出 index 大于 3 的元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“ul li:lt(3)”)</td>
+<td align="left">列出 index 小于 3 的元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+</tbody></table>
+<h2 id="（二）筛选器"><a href="#（二）筛选器" class="headerlink" title="（二）筛选器"></a>（二）筛选器</h2><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$().get(index)</td>
+<td align="left">第 index 元素（正数、负数、空）</td>
+<td align="center">原生 DOM</td>
+</tr>
+<tr>
+<td align="left">$().eq(index)</td>
+<td align="left">第 index 元素（正数、负数、空）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().find(selector)</td>
+<td align="left">限定选择</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().filter(selector)</td>
+<td align="left">过滤选择(fn/true)</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().not(selector)</td>
+<td align="left">过滤选择(fn/false)</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“li”).has(“p”)</td>
+<td align="left">选中后代中包含 P 元素的 li 元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“.demo”).is(“p”)</td>
+<td align="left">所有 class=”demo”的元素中是否有 p 元素</td>
+<td align="center">boolean</td>
+</tr>
+</tbody></table>
+<h2 id="（三）集合与回退"><a href="#（三）集合与回退" class="headerlink" title="（三）集合与回退"></a>（三）集合与回退</h2><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$().add(selector)</td>
+<td align="left">集合</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().end()</td>
+<td align="left">回退</td>
+<td align="center">jQuery 对象</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="三、操作"><a href="#三、操作" class="headerlink" title="三、操作"></a>三、操作</h1><h2 id="（一）操作内容"><a href="#（一）操作内容" class="headerlink" title="（一）操作内容"></a>（一）操作内容</h2><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$().html(string | ==fn==)</td>
+<td align="left">HTML 内容(==特殊：只取第一个，设置全部==)</td>
+<td align="center">string</td>
+</tr>
+<tr>
+<td align="left">$().text(string | ==fn==)</td>
+<td align="left">文本内容(==取全部，设置全部==)</td>
+<td align="center">string</td>
+</tr>
+<tr>
+<td align="left">$().val(string | ==fn==)</td>
+<td align="left">表单内容(==特殊：只取第一个，设置全部==）</td>
+<td align="center">string</td>
+</tr>
+</tbody></table>
+<h2 id="（二）操作样式"><a href="#（二）操作样式" class="headerlink" title="（二）操作样式"></a>（二）操作样式</h2><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$().css(obj)</td>
+<td align="left">获取或设置 css 样式（==可计算==）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().addClass(string | ==fn==)</td>
+<td align="left">添加一个或多个 class</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().removeClass(string | ==fn==)</td>
+<td align="left">移除一个或多个 class</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().hasClass(string)</td>
+<td align="left">检测 class</td>
+<td align="center">boolean</td>
+</tr>
+</tbody></table>
+<h2 id="（三）操作属性"><a href="#（三）操作属性" class="headerlink" title="（三）操作属性"></a>（三）操作属性</h2><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$().attr()</td>
+<td align="left">获取或设置属性值（自定义属性）==基于 setAttribute、getAttribute==</td>
+<td align="center">string</td>
+</tr>
+<tr>
+<td align="left">$().prop()</td>
+<td align="left">获取或设置特性值，==基于原生 DOM，特性映射，非特性不映射==</td>
+<td align="center">string</td>
+</tr>
+</tbody></table>
+<h2 id="（四）操作结构"><a href="#（四）操作结构" class="headerlink" title="（四）操作结构"></a>（四）操作结构</h2><h3 id="1-增（复制操作）"><a href="#1-增（复制操作）" class="headerlink" title="1.增（复制操作）"></a>1.增（复制操作）</h3><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$(==HTML==)</td>
+<td align="left">创建元素（HTML 字符串）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().wrap(==HTML | jQuery | selector | DOM | fn==)</td>
+<td align="left">创建父元素包裹选中元素,每一个单独包裹</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().wrapAll(==HTML | jQuery | selector | DOM | fn==)</td>
+<td align="left">创建父元素包裹所有选中元素,统一包裹</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().wrapInner(==HTML | jQuery | selector | DOM | fn==)</td>
+<td align="left">创建子元素包裹所有子元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().clone(boolean)</td>
+<td align="left">克隆元素（true 深度克隆）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().data(data)</td>
+<td align="left">存储或获取数据</td>
+<td align="center">jQuery 对象</td>
+</tr>
+</tbody></table>
+<h3 id="2-删（剪切操作）"><a href="#2-删（剪切操作）" class="headerlink" title="2.删（剪切操作）"></a>2.删（剪切操作）</h3><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$().empty()</td>
+<td align="left">清空子元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().remove()</td>
+<td align="left">删除自身</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().detach()</td>
+<td align="left">删除自身（包含数据）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+</tbody></table>
+<h3 id="3-改（剪切操作）"><a href="#3-改（剪切操作）" class="headerlink" title="3.改（剪切操作）"></a>3.改（剪切操作）</h3><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$(“A”).insertBefore(selectorB)</td>
+<td align="left">把 A 插入到 B 之前</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“B”).before(jQuery(A))</td>
+<td align="left">在 B 之前插入 A</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“A”).insertAfter(selectorB)</td>
+<td align="left">把 A 插入到 B 之后</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“B”).after(jQuery(A))</td>
+<td align="left">在 B 之后插入 A</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“A”).appendTo(selectorB)</td>
+<td align="left">把 A 插入到 B 中最后子元素的位置</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“B”).append(jQuery(A))</td>
+<td align="left">在 B 中最后子元素的位置插入 A</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“A”).prependTo(selectorB)</td>
+<td align="left">把 A 插入到 B 中第一子元素的位置</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$(“B”).prepend(jQuery(A))</td>
+<td align="left">在 B 中第一子元素的位置插入 A</td>
+<td align="center">jQuery 对象</td>
+</tr>
+</tbody></table>
+<h3 id="4-查"><a href="#4-查" class="headerlink" title="4.查"></a>4.查</h3><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$().siblings(selector)</td>
+<td align="left">所有符合限定的兄弟元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().next(selector)</td>
+<td align="left">下一个并且符合限定的兄弟元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().prev(selector)</td>
+<td align="left">上一个并且符合限定的兄弟元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().nextAll(selector)</td>
+<td align="left">之后并且符合限定的所有兄弟元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().prevAll(selector)</td>
+<td align="left">之前并且符合限定的所有兄弟元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().nextUntil(label，selector)</td>
+<td align="left">之后到标注为止并且符合限定的所有兄弟元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().prevUntil(label，selector)</td>
+<td align="left">之前到标注为止并且符合限定的所有兄弟元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().parent(selector)</td>
+<td align="left">符合限定的父元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().parents(selector)</td>
+<td align="left">符合限定的所有祖先元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().closest(selector)</td>
+<td align="left">符合限定的最近祖先元素（==包括自身==）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().offsetParent(selector)</td>
+<td align="left">符合限定的最近定位祖先元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().children(selector)</td>
+<td align="left">符合限定的子元素</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().index(selector)</td>
+<td align="left">在符合限定的兄弟元素中的索引==不存在返回-1==</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">$().slice(start, end)</td>
+<td align="left">截取范围内的元素（包含 start, 不包含 end）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().each(fn(index, dom){})</td>
+<td align="left">遍历</td>
+<td align="center">jQuery 对象</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="（五）操作位置"><a href="#（五）操作位置" class="headerlink" title="（五）操作位置"></a>（五）操作位置</h2><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$().offset()</td>
+<td align="left">获取/设置距离文档的距离{left, top}==不考虑定位父级==</td>
+<td align="center">object</td>
+</tr>
+<tr>
+<td align="left">$().position()</td>
+<td align="left">获取距定位父级的距离{left, top}==不支持设置==</td>
+<td align="center">object</td>
+</tr>
+<tr>
+<td align="left">$().scrollLeft(==number==)</td>
+<td align="left">获取/设置横向滚动条的距离</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">$().scrollTop(==number==)</td>
+<td align="left">获取/设置纵向滚动条的距离</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">$().width()</td>
+<td align="left">获取内容盒宽度</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">$().height()</td>
+<td align="left">获取内容盒高度</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">$().innerWidth()</td>
+<td align="left">获取填充盒宽度</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">$().innerHeight()</td>
+<td align="left">获取填充盒高度</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">$().outerWidth()</td>
+<td align="left">获取边框盒宽度</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">$().outerHeight()</td>
+<td align="left">获取边框盒高度</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">$().outerWidth(==true==)</td>
+<td align="left">获取占用宽度（包含 margin）</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">$().outerHeight(==true==)</td>
+<td align="left">获取占用高度（包含 margin）</td>
+<td align="center">number</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="四、事件"><a href="#四、事件" class="headerlink" title="四、事件"></a>四、事件</h1><h3 id="1-事件处理"><a href="#1-事件处理" class="headerlink" title="1.事件处理"></a>1.事件处理</h3><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$().type(fn)</td>
+<td align="left">绑定系统事件</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().on(type, selector, data, fn)</td>
+<td align="left">绑定系统事件、自定义事件</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().one(type, selector, data, fn)</td>
+<td align="left">绑定系统事件、自定义事件（==只执行一次==）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().off(type, fn)</td>
+<td align="left">解绑系统事件、自定义事件（==需与绑定时对应==）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().trigger(type, arr)</td>
+<td align="left">触发系统事件、自定义事件（==参数为数组形式==）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().hover(fn, fn)</td>
+<td align="left">hover 事件（==鼠标移入移出==）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+</tbody></table>
+<h3 id="2-事件对象（兼容）"><a href="#2-事件对象（兼容）" class="headerlink" title="2.事件对象（兼容）"></a>2.事件对象（兼容）</h3><ul>
+<li>e.pageX/Y</li>
+<li>e.clientX/Y</li>
+<li>e.which</li>
+<li>e.button</li>
+<li>e.preventDefault() 阻止默认事件</li>
+<li>e.stopPropagation() 阻止冒泡</li>
+<li>return false 阻止事件冒泡和默认事件</li>
+</ul>
+<hr>
+<h1 id="五、动画"><a href="#五、动画" class="headerlink" title="五、动画"></a>五、动画</h1><h3 id="1-动画-API"><a href="#1-动画-API" class="headerlink" title="1.动画 API"></a>1.动画 API</h3><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$().show(speed, easing, callback)</td>
+<td align="left">显示（==宽高、透明度==）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().hide(speed, easing, callback)</td>
+<td align="left">隐藏</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().toggle(speed, easing, callback)</td>
+<td align="left">显示/隐藏</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().fadeIn(speed, easing, callback)</td>
+<td align="left">淡入（==针对 opacity==）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().fadeOut(speed, easing, callback)</td>
+<td align="left">淡出</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().fadeToggle(speed, easing, callback)</td>
+<td align="left">淡入/淡出</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().fadeTo(speed, target, easing, callback)</td>
+<td align="left">淡到 target 值</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().slideDown(speed, easing, callback)</td>
+<td align="left">下拉（==针对高度==）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().slideUp(speed, easing, callback)</td>
+<td align="left">上拉</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().slideToggle(speed, easing, callback)</td>
+<td align="left">下拉/上拉</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().animate(target, speed, easing, callback)</td>
+<td align="left">动画（==综合运动==）</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().stop()</td>
+<td align="left">停止当前动画，进行下段动画</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().stop(true)</td>
+<td align="left">停止所有动画</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().stop(true, true)</td>
+<td align="left">停止当前动画，并瞬间到达当前动画目标点</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().finish()</td>
+<td align="left">直接到达最后动画目标点</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().delay(speed)</td>
+<td align="left">用于动画之间，让一段动画结束后延迟一段时间在进行下段动画</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">jQuery.fx.off = true/false</td>
+<td align="left">关闭动画过渡效果，直接到达每段目标点</td>
+<td align="center">jQuery 对象</td>
+</tr>
+</tbody></table>
+<h3 id="2-动画队列"><a href="#2-动画队列" class="headerlink" title="2.动画队列"></a>2.动画队列</h3><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$().queue(name, data)</td>
+<td align="left">入队</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().queue(name)</td>
+<td align="left">查队</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().dequeue(name)</td>
+<td align="left">单一出队</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().queue(name, fn(next){next()})</td>
+<td align="left">依次出队</td>
+<td align="center">jQuery 对象</td>
+</tr>
+<tr>
+<td align="left">$().clearQueue(name)</td>
+<td align="left">清空队列</td>
+<td align="center">jQuery 对象</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="六、工具"><a href="#六、工具" class="headerlink" title="六、工具"></a>六、工具</h1><h2 id="（一）常用工具"><a href="#（一）常用工具" class="headerlink" title="（一）常用工具"></a>（一）常用工具</h2><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$.type()</td>
+<td align="left">类型判断</td>
+<td align="center">string</td>
+</tr>
+<tr>
+<td align="left">$.isArray()</td>
+<td align="left">数组判断</td>
+<td align="center">boolean</td>
+</tr>
+<tr>
+<td align="left">$.isFunction()</td>
+<td align="left">函数判断</td>
+<td align="center">boolean</td>
+</tr>
+<tr>
+<td align="left">$.trim()</td>
+<td align="left">去除两端空格</td>
+<td align="center">string</td>
+</tr>
+<tr>
+<td align="left">$.proxy(fn, target)</td>
+<td align="left">改变 this 指向</td>
+<td align="center">function</td>
+</tr>
+<tr>
+<td align="left">var $c = $.noConflict()</td>
+<td align="left">防止冲突</td>
+<td align="center">function</td>
+</tr>
+<tr>
+<td align="left">$.each(arr, function(index, ele){})</td>
+<td align="left">遍历</td>
+<td align="center">array</td>
+</tr>
+<tr>
+<td align="left">$.map(arr, function(index, ele){})</td>
+<td align="left">遍历</td>
+<td align="center">array</td>
+</tr>
+<tr>
+<td align="left">$.parseJSON(string)</td>
+<td align="left">解析 JSON</td>
+<td align="center">object</td>
+</tr>
+<tr>
+<td align="left">$.makeArray()</td>
+<td align="left">类数组转换</td>
+<td align="center">object</td>
+</tr>
+</tbody></table>
+<h2 id="（二）拓展工具"><a href="#（二）拓展工具" class="headerlink" title="（二）拓展工具"></a>（二）拓展工具</h2><table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">含义</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$.extend(object)</td>
+<td align="left">拓展静态方法</td>
+<td align="center">object</td>
+</tr>
+<tr>
+<td align="left">$.fn.extend(object)</td>
+<td align="left">拓展实例方法</td>
+<td align="center">object</td>
+</tr>
+</tbody></table>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$.extend(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//随机数</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  getRandom: <span class="function"><span class="keyword">function</span>(<span class="params">min, max</span>) </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span> (min &amp;&amp; max) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      <span class="keyword">return</span> <span class="built_in">Math</span>.random() * (max - min) + min;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.random();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">$.getRandom(<span class="number">5</span>, <span class="number">10</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//拖拽</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">$.fn.extend(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">  drag: <span class="function"><span class="keyword">function</span>(<span class="params">dom</span>) </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> disX, disY;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> self = <span class="keyword">this</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    $(<span class="keyword">this</span>).on(<span class="string">"mousedown"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">      <span class="built_in">console</span>.log(<span class="string">"drag"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">      disX = e.pageX - $(<span class="keyword">this</span>).offset().left;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">      disY = e.pageY - $(<span class="keyword">this</span>).offset().top;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">      $(<span class="built_in">document</span>).on(<span class="string">"mousemove"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">        self.css(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">          left: e.pageX - disX,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">          top: e.pageY - disY,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">          cursor: <span class="string">"move"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        &#125;);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">      &#125;);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">      $(<span class="built_in">document</span>).on(<span class="string">"mouseup"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">        $(<span class="built_in">document</span>).off(<span class="string">"mousemove"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">        $(<span class="built_in">document</span>).off(<span class="string">"mouseup"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">      &#125;);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">    &#125;);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">&#125;);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">$(<span class="string">".demo"</span>).drag();</span></pre></td></tr></table></figure>
+
+<h2 id="（三）网络工具"><a href="#（三）网络工具" class="headerlink" title="（三）网络工具"></a>（三）网络工具</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//请求地址</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  url: <span class="string">""</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//请求方式</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  type: <span class="string">"GET"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//设置上下文</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  context：$(),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//允许请求时长</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">  timeout: <span class="number">1000</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//异步请求（默认异步）</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">async</span>: <span class="literal">true</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//跨域</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">  dataType: <span class="string">"jsonp"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//成功回调 res数据包&#123;code状态码 msg状态 data数据&#125; </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">  success: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;&#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//失败回调 err错误对象&#123;status状态 statusText提示&#125; </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">  error: <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;&#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//完成回调（最后执行）</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">  complete: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">&#125;);</span></pre></td></tr></table></figure>
+
+<h2 id="（四）回调机制"><a href="#（四）回调机制" class="headerlink" title="（四）回调机制"></a>（四）回调机制</h2><h3 id="1-回调Callback"><a href="#1-回调Callback" class="headerlink" title="1.回调Callback"></a>1.回调Callback</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cb = $.Callback(param);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//添加</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">cb.add(fn(x,y)&#123;&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//执行</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">cb.fire(x,y)</span></pre></td></tr></table></figure>
+<ul>
+<li>param ==&gt;&gt; “once” 执行一次就好</li>
+<li>param ==&gt;&gt; “memory” 记忆功能（后加的也可执行）</li>
+<li>param ==&gt;&gt; “unique” 去重功能（一样的功能只添加一个）</li>
+<li>param ==&gt;&gt; “stopFalse” 间断功能（遇到返回false，后续函数就不在执行）</li>
+</ul>
+<h3 id="2-状态Deferred"><a href="#2-状态Deferred" class="headerlink" title="2.状态Deferred"></a>2.状态Deferred</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> df= $.Deferred();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//注册成功的回调函数</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">df.done(fn)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//成功调用</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">df.resolve()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//注册失败的回调函数</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">df.fail(fn)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//失败调用</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">df.reject()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//注册机进行时的回调函数</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">df.progress(fn)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//进行时调用</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">df.notify()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//严格延迟对象，只能注册，不能调用</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">df.promise()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//简化注册</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">df.then(doneFn, failFn, progressFn)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//接力拓展</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">df.then(doneFn()&#123;<span class="keyword">return</span> data&#125;, failFn, progressFn).then(doneFn(data)&#123;use data&#125;)</span></pre></td></tr></table></figure>
+
+<h3 id="3-when"><a href="#3-when" class="headerlink" title="3.when"></a>3.when</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> df1 = $.Deferred();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> df2 = $.Deferred();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> df3 = $.Deferred();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">when(df1(), df2(), df3()).then(resolveFn, rejectFn, notifyFn)</span></pre></td></tr></table></figure>
+<ul>
+<li>when里执行的所有结果为resolve才执行resolveFn</li>
+<li>when里执行的所有结果为reject才执行rejectFn</li>
+<li>否则就执行notifyFn</li>
+</ul>
+<hr>
+
+      
+      <!-- 打赏 -->
+      
+        <div id="reward-btn">
+          打赏
+        </div>
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huafuhub.github.io/blog/2020/01/04/JQUERYa-0/" data-id="ck53qz2cu000erksu92om1lor"
+        class="article-share-link">分享</a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/blog/2020/01/05/NETa/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            NET --- 概述篇
+          
+        </div>
+      </a>
+    
+    
+      <a href="/blog/2020/01/03/ES6a/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">ES6 --- 应用篇</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        notify: false,
+        verify: false,
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        Huafu Li
+      </li>
+      <li>
+        
+          Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="http://localhost:4000/blog/mouse.svg" alt="Huafu"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/pictures">相册</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/blog/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      <script src="/blog/js/jquery-2.0.3.min.js"></script>
+<script src="/blog/js/jquery.justifiedGallery.min.js"></script>
+<script src="/blog/js/lazyload.min.js"></script>
+<script src="/blog/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/blog/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+			onClick: (e) => {
+      	document.getElementById(e.target.innerText).scrollIntoView()
+      	return false;
+    	}
+    });
+  </script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+<script src="/blog/js/ayer.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
+
+  </div>
+</body>
+
+</html>

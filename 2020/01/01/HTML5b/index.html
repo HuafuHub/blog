@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    HTML5 --- 应用篇 |  Huafu
+  </title>
+  
+  <link rel="shortcut icon" href="http://localhost:4000/blog/favicon.ico" />
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  <script src="/blog/js/pace.min.js"></script>
+
+  
+
+  
+
+<link rel="alternate" href="/blog/atom.xml" title="Huafu" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-HTML5b" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  HTML5 --- 应用篇
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/blog/2020/01/01/HTML5b/" class="article-date">
+  <time datetime="2019-12-31T18:00:00.000Z" itemprop="datePublished">2020-01-01</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h3 id="1-文本"><a href="#1-文本" class="headerlink" title="1.文本"></a>1.文本</h3><table>
+<thead>
+<tr>
+<th align="center">元素</th>
+<th align="left">语义</th>
+<th align="left">浏览器默认样式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>h1~h6</strong></td>
+<td align="left">1~6级标题</td>
+<td align="left">display: block; font-weight: bold; font-size: 2/1.5/1.17em; margin-block-start/end: 0.67/0.83/1em</td>
+</tr>
+<tr>
+<td align="center"><strong>p</strong></td>
+<td align="left">段落</td>
+<td align="left">display: block; margin-block-start/end: 1em</td>
+</tr>
+<tr>
+<td align="center"><strong>pre</strong></td>
+<td align="left">源格式显示</td>
+<td align="left">display: block; font-family: monospace; white-space: pre; margin: 1em 0px;</td>
+</tr>
+<tr>
+<td align="center"><strong>blockquote</strong></td>
+<td align="left">引用文段</td>
+<td align="left">display: block; margin-block-start/end: 1em; margin-inline-start/end: 40px;</td>
+</tr>
+<tr>
+<td align="center"><strong>q</strong></td>
+<td align="left">引用短语</td>
+<td align="left">display: inline; q::before{content: open-quote;} q::after{content: close-quote;}</td>
+</tr>
+<tr>
+<td align="center"><strong>strong、b</strong></td>
+<td align="left">十分重要</td>
+<td align="left">font-weight: bold;</td>
+</tr>
+<tr>
+<td align="center"><strong>em、i</strong></td>
+<td align="left">人物思想</td>
+<td align="left">font-style: italic;</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">实体字符</th>
+<th align="center">书写形式</th>
+<th align="center">展示形式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">小于</td>
+<td align="center"><strong>&amp;lt;</strong></td>
+<td align="center">&lt;</td>
+</tr>
+<tr>
+<td align="center">大于</td>
+<td align="center"><strong>&amp;gt;</strong></td>
+<td align="center">&gt;</td>
+</tr>
+<tr>
+<td align="center">空格</td>
+<td align="center"><strong>&amp;nbsp;</strong></td>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">版权</td>
+<td align="center"><strong>&amp;copy;</strong></td>
+<td align="center">&copy;</td>
+</tr>
+<tr>
+<td align="center">和</td>
+<td align="center"><strong>&amp;amp;</strong></td>
+<td align="center">&amp;</td>
+</tr>
+<tr>
+<td align="center">—</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="2-超链接"><a href="#2-超链接" class="headerlink" title="2.超链接"></a>2.超链接</h3><h4 id="（1）href属性"><a href="#（1）href属性" class="headerlink" title="（1）href属性"></a>（1）href属性</h4><ul>
+<li><p><strong>跳转链接</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></pre></td></tr></table></figure>
+</li>
+<li><p><strong>锚链接</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#chapter"</span>&gt;</span>第一章<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"chapter"</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span>第一章<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></pre></td></tr></table></figure>
+</li>
+<li><p><strong>功能链接</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:alert('你好！')"</span>&gt;</span>执行js代码<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"mailto:1030363645@qq.com"</span>&gt;</span>发送邮件<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"tel:16608819295"</span>&gt;</span>拨打电话<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="（2）target属性"><a href="#（2）target属性" class="headerlink" title="（2）target属性"></a>（2）target属性</h4><ul>
+<li><p><strong>默认覆盖当前窗口_self</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span> <span class="attr">target</span>=<span class="string">"_self"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></pre></td></tr></table></figure>
+</li>
+<li><p><strong>在新窗口中打开_blank</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span>  <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="（3）download属性"><a href="#（3）download属性" class="headerlink" title="（3）download属性"></a>（3）download属性</h4><ul>
+<li>仅Chrome、Firefox支持</li>
+</ul>
+<h3 id="3-图片"><a href="#3-图片" class="headerlink" title="3.图片"></a>3.图片</h3><h4 id="（1）src属性（资源路径）"><a href="#（1）src属性（资源路径）" class="headerlink" title="（1）src属性（资源路径）"></a>（1）src属性（资源路径）</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.baidu.com/logo.png"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">“data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAYAAABIdFAMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAA”/</span>&gt;</span></span></pre></td></tr></table></figure>
+<ul>
+<li>路径引入资源</li>
+<li>data URL（data:MIME,base64,数据）<ul>
+<li>优点：减少浏览器的请求；动态数据</li>
+<li>缺点：增加资源体积（传输的内容体积会增加4/3）；不利于浏览器缓存；</li>
+<li>应用：个体体积较小，不适宜使用雪碧图；图片由其它语言动态生成，且图片较小</li>
+</ul>
+</li>
+</ul>
+<h4 id="（2）alt属性（资源失效替代方案）"><a href="#（2）alt属性（资源失效替代方案）" class="headerlink" title="（2）alt属性（资源失效替代方案）"></a>（2）alt属性（资源失效替代方案）</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.baidu.com/logo.png"</span> <span class="attr">alt</span>=<span class="string">"这是一张百度logo图片"</span>&gt;</span></span></pre></td></tr></table></figure>
+<ul>
+<li>链接失效时，宽高也会失效（设置成块盒或行块盒）</li>
+</ul>
+<h4 id="（3）与a元素联用（图片实现跳转链接）"><a href="#（3）与a元素联用（图片实现跳转链接）" class="headerlink" title="（3）与a元素联用（图片实现跳转链接）"></a>（3）与a元素联用（图片实现跳转链接）</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.baidu.com/logo.png"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></pre></td></tr></table></figure>
+<ul>
+<li>行盒里出现行块盒或行盒，自身的高度只跟字体大小有关（不会取决于内部的行盒或行块盒）</li>
+</ul>
+<h4 id="（4）与map元素联用（map元素可以实现指定图片不同区域跳转对应链接）"><a href="#（4）与map元素联用（map元素可以实现指定图片不同区域跳转对应链接）" class="headerlink" title="（4）与map元素联用（map元素可以实现指定图片不同区域跳转对应链接）"></a>（4）与map元素联用（map元素可以实现指定图片不同区域跳转对应链接）</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.baidu.com/logo.png"</span> <span class="attr">usemap</span>=<span class="string">"#logoMap"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">map</span> <span class="attr">name</span>=<span class="string">"logoMap"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"circle"</span> <span class="attr">coords</span>=<span class="string">"x, y, r"</span> <span class="attr">href</span>=<span class="string">"path"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"rect"</span> <span class="attr">coords</span>=<span class="string">"left-top-x, left-top-y, right-bottom-x, right-bottom-y"</span> <span class="attr">href</span>=<span class="string">"path"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"poly"</span> <span class="attr">coords</span>=<span class="string">"x1, y1, x2, y2, x3, y3, x4, y4"</span> <span class="attr">href</span>=<span class="string">"path"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">map</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<h4 id="（5）与figure元素联用（figure元素语义化更好的将相关内容包裹起来）"><a href="#（5）与figure元素联用（figure元素语义化更好的将相关内容包裹起来）" class="headerlink" title="（5）与figure元素联用（figure元素语义化更好的将相关内容包裹起来）"></a>（5）与figure元素联用（figure元素语义化更好的将相关内容包裹起来）</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">figure</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">figcaption</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;/<span class="name">figcaption</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.baidu.com/logo.png"</span> <span class="attr">usemap</span>=<span class="string">"#logoMap"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">map</span> <span class="attr">name</span>=<span class="string">"logoMap"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"circle"</span> <span class="attr">coords</span>=<span class="string">"x, y, r"</span> <span class="attr">href</span>=<span class="string">"path"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"rect"</span> <span class="attr">coords</span>=<span class="string">"left-top-x, left-top-y, right-bottom-x, right-bottom-y"</span> <span class="attr">href</span>=<span class="string">"path"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"poly"</span> <span class="attr">coords</span>=<span class="string">"x1, y1, x2, y2, x3, y3, x4, y4"</span> <span class="attr">href</span>=<span class="string">"path"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;/<span class="name">map</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<h4 id="（6）常见问题"><a href="#（6）常见问题" class="headerlink" title="（6）常见问题"></a>（6）常见问题</h4><ul>
+<li><p><strong>图片区域坍塌</strong></p>
+<ul>
+<li>链接失效时，行盒宽高也会失效</li>
+<li>图片设置成块盒（行块盒）指定宽高</li>
+</ul>
+</li>
+<li><p><strong>超链接包裹高度坍塌</strong></p>
+<ul>
+<li>行盒包裹行盒（行块盒），自身的高度只跟字体大小有关，不会自适应内部的行盒（行块盒）</li>
+<li>超链接设置成块盒（行块盒）</li>
+</ul>
+</li>
+<li><p><strong>块盒包裹底部白边</strong></p>
+<ul>
+<li>图片的基线在下外边距位置</li>
+<li>块盒内部有行盒（行块盒），也会生成参考线（font-family、font-size、line-height）</li>
+<li>不生成行框：某元素内没有任何行盒（行块盒）；某元素字体大小为0</li>
+<li>块盒字体大小设置成0（有副作用）</li>
+<li>图片设置成块盒</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-列表"><a href="#4-列表" class="headerlink" title="4.列表"></a>4.列表</h3><h4 id="（1）有序列表-ol-gt-li"><a href="#（1）有序列表-ol-gt-li" class="headerlink" title="（1）有序列表 ol &gt; li"></a>（1）有序列表 ol &gt; li</h4><h4 id="（2）无序列表-ul-gt-li"><a href="#（2）无序列表-ul-gt-li" class="headerlink" title="（2）无序列表 ul &gt; li"></a>（2）无序列表 ul &gt; li</h4><h4 id="（3）定义列表-dl-gt-dt-dd"><a href="#（3）定义列表-dl-gt-dt-dd" class="headerlink" title="（3）定义列表 dl &gt; dt/dd"></a>（3）定义列表 dl &gt; dt/dd</h4><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">属性值</th>
+<th align="left">含义</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>display</strong></td>
+<td align="left">list-item</td>
+<td align="left">仍然是块盒，但会生成一个附带的次盒子</td>
+<td align="left">次盒子排列在前（可继承）</td>
+</tr>
+<tr>
+<td align="left"><strong>list-style</strong></td>
+<td align="left">none</td>
+<td align="left">设置次盒子样式</td>
+<td align="left">清空次盒子</td>
+</tr>
+</tbody></table>
+<h3 id="5-表单"><a href="#5-表单" class="headerlink" title="5.表单"></a>5.表单</h3><h4 id="（1）input元素（输入框）"><a href="#（1）input元素（输入框）" class="headerlink" title="（1）input元素（输入框）"></a>（1）input元素（输入框）</h4><ul>
+<li><strong>type属性：输入框类型</strong><ul>
+<li>text文本输入框</li>
+<li>password 密码输入框</li>
+<li>date 日期选择框（兼容性问题）</li>
+<li>search 搜索框（兼容性问题）</li>
+<li>range 滑块（兼容性问题）</li>
+<li>color 颜色选择（兼容性问题）</li>
+<li>number 数字输入框（兼容性问题）</li>
+<li>CheckBox 多选框</li>
+<li>radio 单选框</li>
+<li>file 文件选择器</li>
+<li>reset 重置按钮</li>
+<li>button 点击按钮</li>
+</ul>
+</li>
+<li><strong>value 输入框的内容</strong></li>
+<li><strong>placeholder 提示内容</strong></li>
+<li><strong>name限定（同一题）</strong></li>
+</ul>
+<h4 id="（2）select元素（下拉列表）"><a href="#（2）select元素（下拉列表）" class="headerlink" title="（2）select元素（下拉列表）"></a>（2）select元素（下拉列表）</h4><ul>
+<li>option 选项：value 属性定义选中内容（元素内容仅仅是展示）</li>
+<li>optgroup 分组：label 属性定义组名<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">optgroup</span> <span class="attr">label</span>=<span class="string">"city"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hongkong"</span>&gt;</span>beijing<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hongkong"</span>&gt;</span>beijing<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"hongkong"</span>&gt;</span>beijing<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;/<span class="name">optgroup</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="（3）textarea元素（文本域）"><a href="#（3）textarea元素（文本域）" class="headerlink" title="（3）textarea元素（文本域）"></a>（3）textarea元素（文本域）</h4><ul>
+<li>特殊：元素显示内容由元素内容决定，无value属性</li>
+<li>不会发生空白折叠</li>
+</ul>
+<h4 id="（4）button元素（按钮）"><a href="#（4）button元素（按钮）" class="headerlink" title="（4）button元素（按钮）"></a>（4）button元素（按钮）</h4><ul>
+<li>type属性<ul>
+<li>reset 重置</li>
+<li>submit 提交（默认）</li>
+<li>button 普通按钮</li>
+</ul>
+</li>
+</ul>
+<h4 id="（5）表单附属元素"><a href="#（5）表单附属元素" class="headerlink" title="（5）表单附属元素"></a>（5）表单附属元素</h4><h5 id="1）label元素（聚焦关联）"><a href="#1）label元素（聚焦关联）" class="headerlink" title="1）label元素（聚焦关联）"></a>1）label元素（聚焦关联）</h5><ul>
+<li><p>显式关联</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">id</span>=<span class="string">"male"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"male"</span>&gt;</span>男<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span></pre></td></tr></table></figure>
+</li>
+<li><p>隐式关联</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>男<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="2）datalist元素-输入提示"><a href="#2）datalist元素-输入提示" class="headerlink" title="2）datalist元素(输入提示)"></a>2）datalist元素(输入提示)</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">请输入你常用的浏览器？</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">list</span>=<span class="string">"userargent"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"userargent"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"firefox"</span>&gt;</span>火狐<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Chrome"</span>&gt;</span>谷歌<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Safari"</span>&gt;</span>苹果<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Opera"</span>&gt;</span>欧朋<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<h5 id="3）form元素（包裹表单）"><a href="#3）form元素（包裹表单）" class="headerlink" title="3）form元素（包裹表单）"></a>3）form元素（包裹表单）</h5><ul>
+<li>action 属性提交地址</li>
+<li>method 属性传递方式<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"GET"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="4）fieldset元素（表单分组）"><a href="#4）fieldset元素（表单分组）" class="headerlink" title="4）fieldset元素（表单分组）"></a>4）fieldset元素（表单分组）</h5><ul>
+<li>legend 分组标题（子元素）<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">legend</span>&gt;</span>用户信息<span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  账号：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="5）表单状态"><a href="#5）表单状态" class="headerlink" title="5）表单状态"></a>5）表单状态</h5><ul>
+<li>readonly属性 只读</li>
+<li>disabled属性 禁用</li>
+</ul>
+<h4 id="（6）美化表单元素"><a href="#（6）美化表单元素" class="headerlink" title="（6）美化表单元素"></a>（6）美化表单元素</h4><h5 id="1）聚焦-focus"><a href="#1）聚焦-focus" class="headerlink" title="1）聚焦 :focus"></a>1）聚焦 :focus</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">outline-offset</span>: none;<span class="comment">/*外边框偏移量*/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">outline</span>: <span class="number">1px</span> solid red;<span class="comment">/*外边框样式*/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h5 id="2）选中-checked"><a href="#2）选中-checked" class="headerlink" title="2）选中 :checked"></a>2）选中 :checked</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:checked+label</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">color</span>: red;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h5 id="3）文本域的尺寸调整"><a href="#3）文本域的尺寸调整" class="headerlink" title="3）文本域的尺寸调整"></a>3）文本域的尺寸调整</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">textarea</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">resize</span>: both;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h5 id="4）文本框边缘到内容的距离调整"><a href="#4）文本框边缘到内容的距离调整" class="headerlink" title="4）文本框边缘到内容的距离调整"></a>4）文本框边缘到内容的距离调整</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">text-indent</span>: <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h5 id="5）单选-多选框的样式美化"><a href="#5）单选-多选框的样式美化" class="headerlink" title="5）单选/多选框的样式美化"></a>5）单选/多选框的样式美化</h5><ul>
+<li>原生的单选/多选样式无法用css来设置（取决于系统/浏览器）</li>
+<li>用普通元素模拟出想要的样子（舍弃原生的单选/多选框）</li>
+</ul>
+<hr>
+<h3 id="6-表格"><a href="#6-表格" class="headerlink" title="6.表格"></a>6.表格</h3><h4 id="（1）tabel"><a href="#（1）tabel" class="headerlink" title="（1）tabel"></a>（1）tabel</h4><ul>
+<li>caption 标题</li>
+<li>thead 表头</li>
+<li>tbody 表体</li>
+<li>tfoot 表尾<ul>
+<li>tr 行<ul>
+<li>th 单元格（标题）</li>
+<li>td 单元格（内容）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="（2）单元格合并"><a href="#（2）单元格合并" class="headerlink" title="（2）单元格合并"></a>（2）单元格合并</h4><ul>
+<li><strong>跨列</strong><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">"5"</span>&gt;</span></span></pre></td></tr></table></figure></li>
+<li><strong>跨行</strong><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span>=<span class="string">"5"</span>&gt;</span></span></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="7-多媒体"><a href="#7-多媒体" class="headerlink" title="7.多媒体"></a>7.多媒体</h3><h4 id="（1）视频-video"><a href="#（1）视频-video" class="headerlink" title="（1）视频 video"></a>（1）视频 video</h4><h4 id="（2）音频-audio"><a href="#（2）音频-audio" class="headerlink" title="（2）音频 audio"></a>（2）音频 audio</h4><table>
+<thead>
+<tr>
+<th align="center">属性名</th>
+<th align="center">属性值</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>controls</strong></td>
+<td align="center">control</td>
+<td align="center">控件</td>
+</tr>
+<tr>
+<td align="center"><strong>autoplay</strong></td>
+<td align="center">默认false</td>
+<td align="center">自动播放</td>
+</tr>
+<tr>
+<td align="center"><strong>muted</strong></td>
+<td align="center">默认false</td>
+<td align="center">静音播放</td>
+</tr>
+<tr>
+<td align="center"><strong>loop</strong></td>
+<td align="center">默认false</td>
+<td align="center">循环播放</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>video.paused 是否处于暂停状态（true/false）</p>
+</li>
+<li><p>video.pause()暂停</p>
+</li>
+<li><p>video.play()播放</p>
+</li>
+<li><p>video.duration总时间（s）</p>
+</li>
+<li><p>video.currentTime当前时间（s）</p>
+</li>
+<li><p>video.playbackRate速率</p>
+</li>
+<li><p>video.volume音量（0-1）</p>
+</li>
+<li><p>requestFullscreen()</p>
+</li>
+<li><p><strong>正常</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">control</span> <span class="attr">autoplay</span> <span class="attr">muted</span> <span class="attr">loop</span> <span class="attr">src</span>=<span class="string">"./videoes/game.mp4"</span>&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span></pre></td></tr></table></figure>
+</li>
+<li><p><strong>兼容</strong>（旧版本浏览器不支持，各浏览器支持格式不一样）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">control</span> <span class="attr">autoplay</span> <span class="attr">muted</span> <span class="attr">loop</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"video.mp4"</span>&gt;</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"video.webm"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>对不起！你的浏览器不支持，请下载最新浏览器...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="8-嵌入"><a href="#8-嵌入" class="headerlink" title="8.嵌入"></a>8.嵌入</h3><h4 id="（1）iframe元素-框架页"><a href="#（1）iframe元素-框架页" class="headerlink" title="（1）iframe元素(框架页)"></a>（1）iframe元素(框架页)</h4><ul>
+<li><strong>属性</strong><ul>
+<li>src 资源地址</li>
+<li>name 通常与a元素target联用</li>
+<li>scrolling 滚动条</li>
+<li>frameborder 边框</li>
+<li>framespacing 空隙</li>
+<li>allowfullscreen 全屏<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">src</span>=<span class="string">"www.baidu.com"</span> <span class="attr">target</span>=<span class="string">"my-iframe"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">""</span> <span class="attr">name</span>=<span class="string">"my-iframe"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="（2）在页面中使用flash-swf"><a href="#（2）在页面中使用flash-swf" class="headerlink" title="（2）在页面中使用flash(.swf)"></a>（2）在页面中使用flash(.swf)</h4><ul>
+<li><strong>object元素</strong><ul>
+<li>data 资源地址</li>
+<li>type 多用途互联网邮件类型（MIME）</li>
+<li>param 子元素（参数）</li>
+<li>embed 子元素（兼容）<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">object</span> <span class="attr">data</span>=<span class="string">"./game.swf"</span> <span class="attr">type</span>=<span class="string">"application/x-shockwave-flash"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">param</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">embed</span> <span class="attr">data</span>=<span class="string">"./game.swf"</span> <span class="attr">type</span>=<span class="string">"application/x-shockwave-flash"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">object</span>&gt;</span></span></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="9-svg"><a href="#9-svg" class="headerlink" title="9.svg"></a>9.svg</h3><h4 id="（1）特点"><a href="#（1）特点" class="headerlink" title="（1）特点"></a>（1）特点</h4><ul>
+<li>该图片由代码书写而成</li>
+<li>缩放不会失真</li>
+<li>内容轻量</li>
+<li>xml语言格式</li>
+</ul>
+<h4 id="（2）使用"><a href="#（2）使用" class="headerlink" title="（2）使用"></a>（2）使用</h4><ul>
+<li><p>嵌入浏览器</p>
+<ul>
+<li>代码</li>
+</ul>
+</li>
+<li><p>单独成为一个文件</p>
+<ul>
+<li>img</li>
+<li>background-img</li>
+<li>embed</li>
+<li>object</li>
+<li>iframe</li>
+</ul>
+</li>
+</ul>
+<h4 id="（3）元素"><a href="#（3）元素" class="headerlink" title="（3）元素"></a>（3）元素</h4><ul>
+<li><p>rect矩形</p>
+<ul>
+<li>x/y起始点坐标</li>
+<li>width/height宽高</li>
+<li>fill填充</li>
+<li>stroke描边</li>
+</ul>
+</li>
+<li><p>circle圆形</p>
+<ul>
+<li>cx/cy圆心点坐标</li>
+<li>r半径</li>
+</ul>
+</li>
+<li><p>ellipse椭圆</p>
+<ul>
+<li>cx/cy圆心点坐标</li>
+<li>rx/ry半径</li>
+</ul>
+</li>
+<li><p>line线段</p>
+<ul>
+<li>x1/y1起始点坐标</li>
+<li>x2/y2终点坐标</li>
+<li>stroke描边</li>
+</ul>
+</li>
+<li><p>polyline折线</p>
+<ul>
+<li>points坐标点对</li>
+<li>stroke描边</li>
+</ul>
+</li>
+<li><p>polygon多边形</p>
+<ul>
+<li>points坐标点对</li>
+<li>fill填充</li>
+</ul>
+</li>
+</ul>
+<h4 id="（4）path路径"><a href="#（4）path路径" class="headerlink" title="（4）path路径"></a>（4）path路径</h4><ul>
+<li>d 路径命令（大写表示绝对定位，小写表示相对定位）<ul>
+<li>M = moveto</li>
+<li>L = lineto</li>
+<li>H = horizontal lineto</li>
+<li>V = vertical lineto</li>
+<li>C = curveto</li>
+<li>S = smooth curveto</li>
+<li>Q = quadratic Bézier curve</li>
+<li>T = smooth quadratic Bézier curveto</li>
+<li>A = elliptical Arc</li>
+<li>Z = closepath </li>
+</ul>
+</li>
+<li>fill填充</li>
+<li>stroke描边</li>
+</ul>
+<hr>
+<h3 id="10-canvas"><a href="#10-canvas" class="headerlink" title="10.canvas"></a>10.canvas</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">width</span>=<span class="string">"500px"</span> <span class="attr">height</span>=<span class="string">"500px"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//画布</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="javascript">  <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById();</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//画笔</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="keyword">var</span> ctx = canvas.getContext(<span class="string">"2d"</span>);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//移动画笔</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  ctx.moveTo(x, y);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//画笔粗细</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">  ctx.lineWidth = 10;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//开启路径</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">  ctx.beginPath();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//闭合路径</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">  ctx.closePath();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//描边</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">  ctx.stroke();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//填充</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">  ctx.fill();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//橡皮擦</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">  ctx.clearRect(x1, y1, x2, y2);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//矩形</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  ctx.rect(x, y, w, h); <span class="comment">//路径</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  ctx.strokeRect(x, y, w, h); <span class="comment">//描边矩形</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  ctx.fillRect(x, y, w, h); <span class="comment">//填充矩形</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//弧形</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">  ctx.arc(ox, oy, r, begin, end, dirction);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//圆角矩形</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">  ctx.arcTo(x, y, dx, dy, r);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//二次贝塞尔</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">  ctx.quadraticCurveTo(x1, y1, x, y);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//三次贝塞尔</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">  ctx.bezierCurveTo(x1, y1, x2, y2, x, y);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//平移坐标系</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">  ctx.translate(x, y);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//旋转</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line"><span class="javascript">  ctx.rotate(<span class="built_in">Math</span>.PI / <span class="number">2</span>);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//缩放</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">  ctx.scale(1, 1);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//保存坐标系状态</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line">  ctx.save();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//恢复坐标系状态</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line">  ctx.restore();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">54</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//纹理</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">55</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="keyword">var</span> img = <span class="keyword">new</span> Image();</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">56</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  img.src = <span class="string">"index.png"</span>;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">57</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  img.onload = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">58</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">    <span class="keyword">var</span> bg = ctx.createPattern(img);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">59</span></pre></td><td class="code"><pre><span class="line">    ctx.fillStyle = bg;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">60</span></pre></td><td class="code"><pre><span class="line">    ctx.fill();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">61</span></pre></td><td class="code"><pre><span class="line">  &#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">62</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">63</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//线性渐变</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">64</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="keyword">var</span> bg = ctx.createLinearGradient(x1, y1, x2, y2);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">65</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  bg.addColorStop(<span class="number">0</span>, <span class="string">"red"</span>);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">66</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  bg.addColorStop(<span class="number">1</span>, <span class="string">"blue"</span>);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">67</span></pre></td><td class="code"><pre><span class="line">  ctx.fillStyle = bg;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">68</span></pre></td><td class="code"><pre><span class="line">  ctx.fill();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">69</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">70</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="comment">//径向渐变</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">71</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  <span class="keyword">var</span> bg = ctx.createRedialGradient(ox1, oy1, r1, ox2, oy2, r2);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">72</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  bg.addColorStop(<span class="number">0</span>, <span class="string">"red"</span>);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">73</span></pre></td><td class="code"><pre><span class="line"><span class="actionscript">  bg.addColorStop(<span class="number">1</span>, <span class="string">"blue"</span>);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">74</span></pre></td><td class="code"><pre><span class="line">  ctx.fillStyle = bg;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">75</span></pre></td><td class="code"><pre><span class="line">  ctx.fill();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">76</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1)初始化"></a>1)初始化</h4><ul>
+<li>创建画布</li>
+<li><font color=red size=5>html 中 canvas 标签指定 3 个属性 id 标识、width 画布宽度、height 画布高度</font></li>
+<li>获取画布</li>
+<li><font color=red size=5>var canvas = document.getElementById()</font></li>
+<li>获取画笔</li>
+<li><font color=red size=5>var ctx = canvas.getContext(“2d”)</font></li>
+</ul>
+<hr>
+<h4 id="2-线性路径"><a href="#2-线性路径" class="headerlink" title="2)线性路径"></a>2)线性路径</h4><ul>
+<li>创建路径</li>
+<li><font color=red size=5>ctx.beginPath()</font></li>
+<li>画笔粗细</li>
+<li><font color=red size=5>ctx.lineWidth = num</font></li>
+<li>线端样式</li>
+<li><font color=red size=5>ctx.lineCap = “button”/“square”/“round”</font></li>
+<li><font color=red size=5>ctx.lineJoin = “miter”/“bevel”/“round”</font></li>
+<li>画笔定位</li>
+<li><font color=red size=5>ctx.moveTo(x, y)</font></li>
+<li>画线</li>
+<li><font color=red size=5>ctx.lineTo(x, y)</font></li>
+<li>闭合路径</li>
+<li><font color=red size=5>ctx.closePath()</font></li>
+<li>描边</li>
+<li><font color=red size=5>ctx.strokeStyle = “red”</font></li>
+<li><font color=red size=5>ctx.stroke()</font></li>
+<li>填充</li>
+<li><font color=red size=5>ctx.fillStyle = “red”</font></li>
+<li><font color=red size=5>ctx.fill()</font></li>
+<li>擦除</li>
+<li><font color=red size=5>ctx.clearRect(x,y,w,h)</font></li>
+</ul>
+<hr>
+<h4 id="3-基础图形路径"><a href="#3-基础图形路径" class="headerlink" title="3)基础图形路径"></a>3)基础图形路径</h4><h5 id="lt-1-gt-rect-矩形"><a href="#lt-1-gt-rect-矩形" class="headerlink" title="&lt;1&gt;rect 矩形"></a>&lt;1&gt;rect 矩形</h5><ul>
+<li><font color=red size=5>ctx.rect(x, y, w, h)</font><img src="./rect.png" width=300>
+
+</li>
+</ul>
+<h5 id="lt-2-gt-arc-弧形（圆形）"><a href="#lt-2-gt-arc-弧形（圆形）" class="headerlink" title="&lt;2&gt; arc 弧形（圆形）"></a>&lt;2&gt; arc 弧形（圆形）</h5><ul>
+<li><font color=red size=5>ctx.arc(ox, oy, r, begin, end, dirction)</font><img src="./arc.png" width=300>
+
+</li>
+</ul>
+<h5 id="lt-3-gt-arcTo-圆角"><a href="#lt-3-gt-arcTo-圆角" class="headerlink" title="&lt;3&gt; arcTo 圆角"></a>&lt;3&gt; arcTo 圆角</h5><ul>
+<li><font color=red size=5>ctx.arcTo(x, y, dx, dy, r)</font><img src="./arcTo.png" width=300>
+
+</li>
+</ul>
+<hr>
+<h4 id="4-贝塞尔曲线"><a href="#4-贝塞尔曲线" class="headerlink" title="4)贝塞尔曲线"></a>4)贝塞尔曲线</h4><h5 id="lt-1-gt-二次贝塞尔"><a href="#lt-1-gt-二次贝塞尔" class="headerlink" title="&lt;1&gt; 二次贝塞尔"></a>&lt;1&gt; 二次贝塞尔</h5><ul>
+<li><font color=red size=5>ctx.quadraticCurveTo(x1, y1, x, y)</font></li>
+<li>从上一点开始绘制一条二次曲线，到(x, y)为止，并且以(x1, y1)作为控制点</li>
+</ul>
+<h5 id="lt-2-gt-三次贝塞尔"><a href="#lt-2-gt-三次贝塞尔" class="headerlink" title="&lt;2&gt; 三次贝塞尔"></a>&lt;2&gt; 三次贝塞尔</h5><ul>
+<li><font color=red size=5>ctx.bezierCurveTo(x1, y1, x2, y2, x, y)</font></li>
+<li>从上一个点开始绘制一条曲线，到(x, y)为止，并且以(x1, y1)和(x2, y2)为控制点</li>
+</ul>
+<hr>
+<h4 id="5-坐标系控制"><a href="#5-坐标系控制" class="headerlink" title="5)坐标系控制"></a>5)坐标系控制</h4><ul>
+<li>==全局控制==</li>
+</ul>
+<h5 id="lt-1-gt-translate-平移坐标系原点"><a href="#lt-1-gt-translate-平移坐标系原点" class="headerlink" title="&lt;1&gt; translate 平移坐标系原点"></a>&lt;1&gt; translate 平移坐标系原点</h5><ul>
+<li><font color=red size=5>ctx.translate(x, y)</font></li>
+<li>原坐标系原点在画布左上角点</li>
+</ul>
+<h5 id="lt-2-gt-rotate-旋转路径"><a href="#lt-2-gt-rotate-旋转路径" class="headerlink" title="&lt;2&gt; rotate 旋转路径"></a>&lt;2&gt; rotate 旋转路径</h5><ul>
+<li><font color=red size=5>ctx.rotate(Math.PI)</font></li>
+<li>相对于坐标原点进行旋转</li>
+</ul>
+<h5 id="lt-3-gt-scale-路径缩放"><a href="#lt-3-gt-scale-路径缩放" class="headerlink" title="&lt;3&gt; scale 路径缩放"></a>&lt;3&gt; scale 路径缩放</h5><ul>
+<li><font color=red size=5>ctx.scale(x, y)</font></li>
+<li>每个点的位置进行相应倍数的缩放</li>
+</ul>
+<h5 id="lt-4-gt-save-restore-保存、恢复坐标系状态数据"><a href="#lt-4-gt-save-restore-保存、恢复坐标系状态数据" class="headerlink" title="&lt;4&gt; save/restore 保存、恢复坐标系状态数据"></a>&lt;4&gt; save/restore 保存、恢复坐标系状态数据</h5><ul>
+<li><font color=red size=5>ctx.save()</font></li>
+<li>保存坐标系状态（平移、旋转、缩放）</li>
+<li><font color=red size=5>ctx.restore()</font></li>
+<li>恢复保存时的坐标系状态</li>
+</ul>
+<hr>
+<h4 id="6-特殊填充效果"><a href="#6-特殊填充效果" class="headerlink" title="6)特殊填充效果"></a>6)特殊填充效果</h4><ul>
+<li><font color=red size=5>从坐标系原点开始填充</font></li>
+</ul>
+<h5 id="lt-1-gt-createPattern-纹理"><a href="#lt-1-gt-createPattern-纹理" class="headerlink" title="&lt;1&gt; createPattern 纹理"></a>&lt;1&gt; createPattern 纹理</h5><ul>
+<li><font color=red size=5>ctx.createPattern(img)</font></li>
+</ul>
+<h5 id="lt-2-gt-createLinearGradient-线性渐变"><a href="#lt-2-gt-createLinearGradient-线性渐变" class="headerlink" title="&lt;2&gt; createLinearGradient 线性渐变"></a>&lt;2&gt; createLinearGradient 线性渐变</h5><ul>
+<li><font color=red size=5>ctx.createLinearGradient(x1,y1,x2,y2)</font></li>
+<li><font color=red size=5>bg.addColorStop(0, “red”)</font></li>
+<li><font color=red size=5>bg.addColorStop(1, “blue”)</font></li>
+</ul>
+<h5 id="lt-3-gt-createRedialGradient-径向渐变"><a href="#lt-3-gt-createRedialGradient-径向渐变" class="headerlink" title="&lt;3&gt; createRedialGradient 径向渐变"></a>&lt;3&gt; createRedialGradient 径向渐变</h5><ul>
+<li><font color=red size=5>ctx.createRedialGradient(x1,y1,r1, x2,y2,r2)</font></li>
+<li><font color=red size=5>bg.addColorStop(0, “red”)</font></li>
+<li><font color=red size=5>bg.addColorStop(1, “blue”)</font></li>
+</ul>
+<hr>
+<h4 id="7）阴影"><a href="#7）阴影" class="headerlink" title="7）阴影"></a>7）阴影</h4><ul>
+<li>阴影颜色</li>
+<li><font color=red size=5>ctx.shadowColor = color</font></li>
+<li>模糊半径</li>
+<li><font color=red size=5>ctx.shadowBlur = num</font></li>
+<li>偏移量</li>
+<li><font color=red size=5>ctx.shadowOffsetX = num</font></li>
+<li><font color=red size=5>ctx.shadowOffsetY = num</font></li>
+</ul>
+<hr>
+
+      
+      <!-- 打赏 -->
+      
+        <div id="reward-btn">
+          打赏
+        </div>
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huafuhub.github.io/blog/2020/01/01/HTML5b/" data-id="ck53qz2bm0009rksu3dtk73ga"
+        class="article-share-link">分享</a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/blog/2020/01/02/CSS2a/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            CSS2 --- 应用篇
+          
+        </div>
+      </a>
+    
+    
+      <a href="/blog/2020/01/01/HTML5a/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">HTML --- 概述篇</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        notify: false,
+        verify: false,
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        Huafu Li
+      </li>
+      <li>
+        
+          Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="http://localhost:4000/blog/mouse.svg" alt="Huafu"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/pictures">相册</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/blog/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      <script src="/blog/js/jquery-2.0.3.min.js"></script>
+<script src="/blog/js/jquery.justifiedGallery.min.js"></script>
+<script src="/blog/js/lazyload.min.js"></script>
+<script src="/blog/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/blog/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+			onClick: (e) => {
+      	document.getElementById(e.target.innerText).scrollIntoView()
+      	return false;
+    	}
+    });
+  </script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+<script src="/blog/js/ayer.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
+
+  </div>
+</body>
+
+</html>
