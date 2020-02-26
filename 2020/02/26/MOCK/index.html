@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Git --- 概述篇 |  “鼠”于Huafu的“2”！
+    MockJs 与 Axios 的使用 |  “鼠”于Huafu的“2”！
   </title>
   
   <link rel="shortcut icon" href="http://localhost:4000/blog/favicon.ico" />
@@ -27,7 +27,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-GITa" class="article article-type-post" itemscope
+  <article id="post-MOCK" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -35,7 +35,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Git --- 概述篇
+  MockJs 与 Axios 的使用
 </h1>
   
 
@@ -44,8 +44,8 @@
 
     
     <div class="article-meta">
-      <a href="/blog/2020/01/06/GITa/" class="article-date">
-  <time datetime="2020-01-05T16:00:00.000Z" itemprop="datePublished">2020-01-06</time>
+      <a href="/blog/2020/02/26/MOCK/" class="article-date">
+  <time datetime="2020-02-26T13:01:40.000Z" itemprop="datePublished">2020-02-26</time>
 </a>
       
     </div>
@@ -53,8 +53,6 @@
 
     
     
-    <div class="tocbot"></div>
-
 
 
 
@@ -68,133 +66,32 @@
       
 
       
-      <h1 id="一、分布式版本控制工具"><a href="#一、分布式版本控制工具" class="headerlink" title="一、分布式版本控制工具"></a>一、分布式版本控制工具</h1><h2 id="（一）使用"><a href="#（一）使用" class="headerlink" title="（一）使用"></a>（一）使用</h2><h3 id="1-初始化本地仓库"><a href="#1-初始化本地仓库" class="headerlink" title="1.初始化本地仓库"></a>1.初始化本地仓库</h3><blockquote>
-<p>git init</p>
+      <ol>
+<li><p>安装</p>
+<blockquote>
+<p>npm install mockjs –save<br>npm install axios –save</p>
 </blockquote>
-<h3 id="2-创建秘钥、查看、配置"><a href="#2-创建秘钥、查看、配置" class="headerlink" title="2.创建秘钥、查看、配置"></a>2.创建秘钥、查看、配置</h3><blockquote>
-<p>ssh-keygen<br>cd ~/.ssh<br>ls</p>
-</blockquote>
+</li>
+<li><p>模拟假数据</p>
+</li>
+</ol>
 <ul>
-<li>copy id_rsa.pub into gitHub/Settings/SSH and GPG keys/Key</li>
+<li>mock.js文件<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Mock <span class="keyword">from</span> <span class="string">'mockjs'</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data = Mock.mock(<span class="string">'https://www.test.com'</span>, &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="string">"userInfo|10"</span>: [&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"id|+1"</span>: <span class="number">1</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"name"</span>: <span class="string">"@cname"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"age|18-28"</span>: <span class="number">25</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"sex|1"</span>: [<span class="string">"男"</span>, <span class="string">"女"</span>]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  &#125;]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> data;</span></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="3-关联远程仓库"><a href="#3-关联远程仓库" class="headerlink" title="3.关联远程仓库"></a>3.关联远程仓库</h3><blockquote>
-<p>git remote add origin <a href="https://github.com/HuafuHub/myTest.git" target="_blank" rel="noopener">https://github.com/HuafuHub/myTest.git</a></p>
-</blockquote>
-<h3 id="4-拉取远程仓库"><a href="#4-拉取远程仓库" class="headerlink" title="4.拉取远程仓库"></a>4.拉取远程仓库</h3><blockquote>
-<p>git pull –rebase origin master</p>
-</blockquote>
-<h1 id="二、常用命令"><a href="#二、常用命令" class="headerlink" title="二、常用命令"></a>二、常用命令</h1><table>
-<thead>
-<tr>
-<th align="left">命令</th>
-<th align="left">含义</th>
-<th align="left">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">mkdir dirname</td>
-<td align="left">创建文件夹</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">cd dirname</td>
-<td align="left">进入文件夹</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><font color=green>git init</td>
-<td align="left">创建版本库</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">ls -ah</td>
-<td align="left">查看隐藏文件</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">git config –list</td>
-<td align="left">查看配置文件</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">git config –global user.name ‘huafu’</td>
-<td align="left">配置用户名</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">git config –global user.email ‘1030363645@qq.com’</td>
-<td align="left">配置邮件地址</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">git remote add origin url</td>
-<td align="left">关联远程仓库</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">git remote rename oldname newname</td>
-<td align="left">重命名远程仓库</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">git remote -v</td>
-<td align="left">查看远程仓库地址</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">git remote</td>
-<td align="left">查看远程仓库名</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><font color=green>git status</td>
-<td align="left">查看文件状态</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><font color=green>git add <font color=red>file</td>
-<td align="left">从工作区添加至暂存区</td>
-<td align="left">单个文件</td>
-</tr>
-<tr>
-<td align="left"><font color=green>git add <strong><font color=red>.</strong></td>
-<td align="left">从工作区添加至暂存区</td>
-<td align="left">整个当前目录的文件</td>
-</tr>
-<tr>
-<td align="left"><font color=green>git commit <font color=red>-m ‘msg’</td>
-<td align="left">从暂存区提交至本地仓库</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><font color=green>git branch <font color=red>name</td>
-<td align="left">创建分支</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><font color=green>git branch -d <font color=red>name</td>
-<td align="left">删除分支</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><font color=green>git checkout -b <font color=red>name</td>
-<td align="left">创建并切换分支</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><font color=green>git checkout <font color=red>name</td>
-<td align="left">切换分支</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><font color=green>git checkout <font color=red>– flie</td>
-<td align="left">恢复到暂存区或本地仓库同步状态</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<img src="./git.png">
-
-
+<ol start="3">
+<li>使用假数据</li>
+</ol>
+<ul>
+<li>index.jsx入口文件<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'./mock'</span>;</span></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>请求</li>
+</ol>
+<ul>
+<li>需要假数据的文件<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Axios <span class="keyword">from</span> <span class="string">'axios'</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Axios.get(<span class="string">'https://www.test.com'</span>).then(<span class="function"><span class="params">res</span> =&gt;</span> <span class="built_in">console</span>.log(res.data))</span></pre></td></tr></table></figure></li>
+</ul>
 
       
       <!-- 打赏 -->
@@ -205,7 +102,7 @@
         
     </div>
     <footer class="article-footer">
-      <a data-url="https://huafuhub.github.io/blog/2020/01/06/GITa/" data-id="ck73cha24000aw8tg5jaj24tb"
+      <a data-url="https://huafuhub.github.io/blog/2020/02/26/MOCK/" data-id="ck73cha2c000ew8tg1z1lbk5f"
         class="article-share-link">分享</a>
       
     </footer>
@@ -216,19 +113,10 @@
   
   <nav class="article-nav">
     
-      <a href="/blog/2020/01/07/WEBPACKa/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Webpack --- 应用篇
-          
-        </div>
-      </a>
     
-    
-      <a href="/blog/2020/01/05/NETa/" class="article-nav-link">
+      <a href="/blog/2020/01/31/VUEa/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">NET --- 概述篇</div>
+        <div class="article-nav-title">VUE --- 应用篇</div>
       </a>
     
   </nav>

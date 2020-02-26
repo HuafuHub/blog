@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://huafuhub.github.io/blog/"/>
-  <updated>2020-01-07T10:44:27.751Z</updated>
+  <updated>2020-02-26T13:17:41.979Z</updated>
   <id>https://huafuhub.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MockJs 与 Axios 的使用</title>
+    <link href="https://huafuhub.github.io/blog/2020/02/26/MOCK/"/>
+    <id>https://huafuhub.github.io/blog/2020/02/26/MOCK/</id>
+    <published>2020-02-26T13:01:40.000Z</published>
+    <updated>2020-02-26T13:17:41.979Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;安装&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;npm install mockjs –save&lt;br&gt;npm install axios
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VUE --- 应用篇</title>
+    <link href="https://huafuhub.github.io/blog/2020/01/31/VUEa/"/>
+    <id>https://huafuhub.github.io/blog/2020/01/31/VUEa/</id>
+    <published>2020-01-31T04:00:00.000Z</published>
+    <updated>2020-02-26T12:59:48.481Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、why&quot;&gt;&lt;a href=&quot;#一、why&quot; class=&quot;headerlink&quot; title=&quot;一、why?&quot;&gt;&lt;/a&gt;一、why?&lt;/h1&gt;&lt;h2 id=&quot;（一）性能更好&quot;&gt;&lt;a href=&quot;#（一）性能更好&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Gulp --- 概述篇</title>
@@ -67,7 +116,7 @@
     <link href="https://huafuhub.github.io/blog/2020/01/06/GITa/"/>
     <id>https://huafuhub.github.io/blog/2020/01/06/GITa/</id>
     <published>2020-01-05T16:00:00.000Z</published>
-    <updated>2020-01-07T10:48:21.466Z</updated>
+    <updated>2020-02-26T13:19:58.906Z</updated>
     
     <summary type="html">
     
