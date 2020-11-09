@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>PACKb</title>
-    <url>/blog/2020/11/09/PACKb/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>包管理工具</title>
     <url>/blog/2020/11/09/PACKa/</url>
     <content><![CDATA[<h1 id="包管理工具概述"><a href="#包管理工具概述" class="headerlink" title="包管理工具概述"></a>包管理工具概述</h1><blockquote>
@@ -332,7 +327,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>typescript 应用篇</title>
+    <title>typescript --- 应用篇</title>
     <url>/blog/2020/11/09/TYPESCRIPTa/</url>
     <content><![CDATA[<h1 id="一、入门"><a href="#一、入门" class="headerlink" title="一、入门"></a>一、入门</h1><h2 id="（一）环境配置"><a href="#（一）环境配置" class="headerlink" title="（一）环境配置"></a>（一）环境配置</h2><ol>
 <li>安装 typescript<blockquote>
@@ -597,7 +592,7 @@
 <h2 id="（三）声明文件"><a href="#（三）声明文件" class="headerlink" title="（三）声明文件"></a>（三）声明文件</h2>]]></content>
   </entry>
   <entry>
-    <title>react 应用篇</title>
+    <title>react --- 应用篇</title>
     <url>/blog/2020/11/09/REACTa/</url>
     <content><![CDATA[<h1 id="一、开发环境"><a href="#一、开发环境" class="headerlink" title="一、开发环境"></a>一、开发环境</h1><h2 id="（一）浏览器"><a href="#（一）浏览器" class="headerlink" title="（一）浏览器"></a>（一）浏览器</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- react --&gt;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">crossorigin</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/react@16/umd/react.development.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- react-dom --&gt;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">crossorigin</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/react-dom@16/umd/react-dom.development.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- babel --&gt;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/babel-standalone@6.15.0/babel.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/babel"</span>&gt;</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="actionscript"><span class="comment">// 使用jsx语法</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></pre></td></tr></table></figure>
 
@@ -3019,7 +3014,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Nodejs 应用篇</title>
+    <title>Nodejs --- 应用篇</title>
     <url>/blog/2020/11/09/NODEJSa/</url>
     <content><![CDATA[<h1 id="一、node-核心"><a href="#一、node-核心" class="headerlink" title="一、node 核心"></a>一、node 核心</h1><h2 id="（一）全局对象-global"><a href="#（一）全局对象-global" class="headerlink" title="（一）全局对象 global"></a>（一）全局对象 global</h2><h3 id="1-Buffer-缓冲器"><a href="#1-Buffer-缓冲器" class="headerlink" title="1.Buffer 缓冲器"></a>1.Buffer 缓冲器</h3><ul>
 <li>Buffer 类是 JavaScript 的 Uint8Array 类的子类，且继承时带上了涵盖额外用例的方法。</li>

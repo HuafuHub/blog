@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://huafuhub.github.io/blog/"/>
-  <updated>2020-11-09T09:21:10.763Z</updated>
+  <updated>2020-11-09T09:21:45.561Z</updated>
   <id>https://huafuhub.github.io/blog/</id>
   
   <author>
@@ -15,21 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>PACKb</title>
-    <link href="https://huafuhub.github.io/blog/2020/11/09/PACKb/"/>
-    <id>https://huafuhub.github.io/blog/2020/11/09/PACKb/</id>
-    <published>2020-11-09T08:43:47.000Z</published>
-    <updated>2020-11-09T09:21:10.763Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>包管理工具</title>
@@ -147,11 +132,11 @@
   </entry>
   
   <entry>
-    <title>typescript 应用篇</title>
+    <title>typescript --- 应用篇</title>
     <link href="https://huafuhub.github.io/blog/2020/11/09/TYPESCRIPTa/"/>
     <id>https://huafuhub.github.io/blog/2020/11/09/TYPESCRIPTa/</id>
     <published>2020-11-09T08:31:26.000Z</published>
-    <updated>2020-11-09T09:22:35.152Z</updated>
+    <updated>2020-11-09T09:29:34.053Z</updated>
     
     <summary type="html">
     
@@ -170,11 +155,11 @@
   </entry>
   
   <entry>
-    <title>react 应用篇</title>
+    <title>react --- 应用篇</title>
     <link href="https://huafuhub.github.io/blog/2020/11/09/REACTa/"/>
     <id>https://huafuhub.github.io/blog/2020/11/09/REACTa/</id>
     <published>2020-11-09T08:30:06.000Z</published>
-    <updated>2020-11-09T09:22:57.154Z</updated>
+    <updated>2020-11-09T09:29:24.682Z</updated>
     
     <summary type="html">
     
@@ -273,11 +258,11 @@
   </entry>
   
   <entry>
-    <title>Nodejs 应用篇</title>
+    <title>Nodejs --- 应用篇</title>
     <link href="https://huafuhub.github.io/blog/2020/11/09/NODEJSa/"/>
     <id>https://huafuhub.github.io/blog/2020/11/09/NODEJSa/</id>
     <published>2020-11-09T08:22:43.000Z</published>
-    <updated>2020-11-09T09:23:32.549Z</updated>
+    <updated>2020-11-09T09:28:59.932Z</updated>
     
     <summary type="html">
     
@@ -473,6 +458,30 @@
         
         
           &lt;h1 id=&quot;一、&quot;&gt;&lt;a href=&quot;#一、&quot; class=&quot;headerlink&quot; title=&quot;一、$()&quot;&gt;&lt;/a&gt;一、$()&lt;/h1&gt;&lt;h3 id=&quot;1-css-selector&quot;&gt;&lt;a href=&quot;#1-css-selector&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ES6 --- 应用篇</title>
+    <link href="https://huafuhub.github.io/blog/2020/01/03/ES6a/"/>
+    <id>https://huafuhub.github.io/blog/2020/01/03/ES6a/</id>
+    <published>2020-01-02T18:00:00.000Z</published>
+    <updated>2020-01-07T10:42:56.883Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、工具-babel-优雅降级&quot;&gt;&lt;a href=&quot;#一、工具-babel-优雅降级&quot; class=&quot;headerlink&quot; title=&quot;一、工具 babel 优雅降级&quot;&gt;&lt;/a&gt;一、工具 babel 优雅降级&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;npm init
         
       
     
