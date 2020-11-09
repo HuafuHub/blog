@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    typescript 应用篇 |  “鼠”于Huafu的“2”！
+  </title>
+  
+  <link rel="shortcut icon" href="http://localhost:4000/blog/favicon.ico" />
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  <script src="/blog/js/pace.min.js"></script>
+
+  
+
+  
+
+<link rel="alternate" href="/blog/atom.xml" title="“鼠”于Huafu的“2”！" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-TYPESCRIPTa" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  typescript 应用篇
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/blog/2020/11/09/TYPESCRIPTa/" class="article-date">
+  <time datetime="2020-11-09T08:31:26.000Z" itemprop="datePublished">2020-11-09</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h1 id="一、入门"><a href="#一、入门" class="headerlink" title="一、入门"></a>一、入门</h1><h2 id="（一）环境配置"><a href="#（一）环境配置" class="headerlink" title="（一）环境配置"></a>（一）环境配置</h2><ol>
+<li>安装 typescript<blockquote>
+<p>yarn global add typescript</p>
+</blockquote>
+</li>
+<li>配置 node 环境<blockquote>
+<p>yarn add @types/node</p>
+</blockquote>
+</li>
+<li>简化流程<blockquote>
+<p>yarn add ts-node<br>yarn add nodemon</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2 id="（二）基础"><a href="#（二）基础" class="headerlink" title="（二）基础"></a>（二）基础</h2><h3 id="1-基本类型"><a href="#1-基本类型" class="headerlink" title="1.基本类型"></a>1.基本类型</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str: <span class="built_in">string</span> = <span class="string">''</span><span class="comment">//字符串</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> num: <span class="built_in">number</span> = <span class="number">1</span><span class="comment">//数字</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bol: <span class="built_in">boolean</span> = <span class="literal">true</span><span class="comment">//布尔</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj: object = &#123;&#125;<span class="comment">//对象</span></span></pre></td></tr></table></figure>
+
+<h3 id="2-数组约束"><a href="#2-数组约束" class="headerlink" title="2.数组约束"></a>2.数组约束</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1: <span class="built_in">any</span>[] = []<span class="comment">//数组，数组项可以是任意类型</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr2: <span class="built_in">Array</span>&lt;<span class="built_in">any</span>&gt; = []<span class="comment">//数组，数组项可以是任意类型</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr3: [] = [<span class="string">''</span>, <span class="number">10</span>]<span class="comment">//数组，数组项可以是字符串或数字</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr4: [<span class="built_in">string</span>, <span class="built_in">number</span>] = [<span class="string">''</span>, <span class="number">10</span>]<span class="comment">//数组，数组项可以是字符串或数字</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr5: (<span class="built_in">string</span>|<span class="built_in">number</span>)[] = [<span class="string">''</span>, <span class="number">10</span>]<span class="comment">//数组，数组项可以是字符串或数字</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr6: readonly <span class="built_in">number</span>[] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]<span class="comment">//只读数组</span></span></pre></td></tr></table></figure>
+
+<h3 id="3-函数约束"><a href="#3-函数约束" class="headerlink" title="3.函数约束"></a>3.函数约束</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//无返回值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params">a: <span class="built_in">number</span>, b: <span class="built_in">string</span></span>): <span class="title">void</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="built_in">console</span>.log(<span class="string">'hello'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//永不结束</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params">a: <span class="built_in">number</span>, b: <span class="built_in">string</span></span>): <span class="title">never</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">while</span>(<span class="literal">true</span>)&#123;&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//函数重载</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn3</span>(<span class="params">a:<span class="built_in">number</span>, b:<span class="built_in">number</span></span>):<span class="title">number</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="function"><span class="keyword">function</span> <span class="title">fn3</span>(<span class="params">a:<span class="built_in">string</span>, b:<span class="built_in">string</span></span>):<span class="title">string</span></span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="function"><span class="function"><span class="keyword">function</span> <span class="title">fn3</span>(<span class="params">a: <span class="built_in">number</span> | <span class="built_in">string</span>, b: <span class="built_in">number</span> | <span class="built_in">string</span></span>):<span class="title">number</span> | <span class="title">string</span> </span>&#123;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="function">  <span class="title">if</span> (<span class="params"><span class="keyword">typeof</span> a === "<span class="built_in">number</span>" &amp;&amp; <span class="keyword">typeof</span> b === "<span class="built_in">number</span>"</span>) </span>&#123;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="function">    <span class="title">return</span> <span class="title">a</span> * <span class="title">b</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"><span class="function">  &#125;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"><span class="function">  <span class="title">else</span> <span class="title">if</span> (<span class="params"><span class="keyword">typeof</span> a === "<span class="built_in">string</span>" &amp;&amp; <span class="keyword">typeof</span> a === "<span class="built_in">string</span>"</span>) </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> a + b</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"a 和 b 类型必须相同！"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//                              可选参数     默认参数</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a: <span class="built_in">number</span> | <span class="built_in">string</span>, b?: <span class="built_in">string</span>, c: <span class="built_in">string</span> = "c"</span>): <span class="title">void</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> a === <span class="string">"number"</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">//类型保护</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">    <span class="built_in">console</span>.log(a)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">  <span class="built_in">console</span>.log(b, c)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="4-类型别名"><a href="#4-类型别名" class="headerlink" title="4.类型别名"></a>4.类型别名</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//类型别名</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Type1 = <span class="string">'1'</span> | <span class="string">'2'</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Type2 = <span class="function">(<span class="params">a: <span class="built_in">string</span></span>) =&gt;</span> <span class="built_in">string</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Type3 = &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  (a: <span class="built_in">string</span>): <span class="built_in">string</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Type4 = &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  T1?: <span class="string">'1'</span> | <span class="string">'2'</span><span class="comment">//成员可选</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">  readonly T2: readonly <span class="built_in">number</span>[]<span class="comment">//只读成员</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">  T3(a: <span class="built_in">number</span>): <span class="built_in">number</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">  T4: <span class="function">(<span class="params">a: <span class="built_in">string</span></span>) =&gt;</span> <span class="built_in">string</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//组合</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> A = &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">  a: <span class="built_in">string</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> B = &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">  b: <span class="built_in">number</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> C = &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">  c: <span class="built_in">boolean</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">&#125; &amp; A &amp; B</span></pre></td></tr></table></figure>
+
+<h3 id="5-枚举"><a href="#5-枚举" class="headerlink" title="5.枚举"></a>5.枚举</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Enum &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  prop1 = <span class="string">"abc"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  prop2 = <span class="number">123</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> data: Enum;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">data = Enum.prop1 <span class="comment">// "abc"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">data = Enum.prop2 <span class="comment">// 123</span></span></pre></td></tr></table></figure>
+
+<h3 id="6-接口"><a href="#6-接口" class="headerlink" title="6.接口"></a>6.接口</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//接口</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Type1 &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  (a: <span class="built_in">string</span>): <span class="built_in">string</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Type2 &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  T1?: <span class="string">'1'</span> | <span class="string">'2'</span><span class="comment">//成员可选</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  readonly T2: readonly <span class="built_in">number</span>[]<span class="comment">//只读成员</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  T3(a: <span class="built_in">number</span>): <span class="built_in">number</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">  T4: <span class="function">(<span class="params">a: <span class="built_in">string</span></span>) =&gt;</span> <span class="built_in">string</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//继承</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> A &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">  a: <span class="built_in">string</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> B &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">  b: <span class="built_in">number</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> C <span class="keyword">extends</span> A, B&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">  c: <span class="built_in">boolean</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="7-类"><a href="#7-类" class="headerlink" title="7.类"></a>7.类</h3><ul>
+<li>属性列表描述</li>
+<li>属性描述符</li>
+<li>权限描述符</li>
+<li>严格属性初始化</li>
+<li>访问器属性<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> User&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//属性列表描述</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//权限描述符</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">public</span> name: <span class="built_in">string</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">protected</span> sex: <span class="string">"male"</span> | <span class="string">"female"</span> = <span class="string">"male"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">private</span> _age: <span class="built_in">number</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//属性描述符</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//语法糖，自动描述和赋值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">constructor</span>(<span class="params">readonly area: <span class="built_in">string</span>, like?:<span class="built_in">string</span></span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">//访问器属性</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">set</span> age(newValue) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">this</span>._age = newValue</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">get</span> age() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>._age</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="8-泛型"><a href="#8-泛型" class="headerlink" title="8.泛型"></a>8.泛型</h3><ul>
+<li>函数泛型</li>
+<li>类泛型</li>
+<li>接口泛型</li>
+<li>类型别名泛型</li>
+<li>泛型约束（继承）</li>
+<li>多泛型</li>
+</ul>
+<h3 id="9-类型兼容性"><a href="#9-类型兼容性" class="headerlink" title="9.类型兼容性"></a>9.类型兼容性</h3><ul>
+<li>断言：<ul>
+<li><type>data 断言</li>
+<li>data as type 断言</li>
+<li>data! 非空断言</li>
+</ul>
+</li>
+<li>函数：<ul>
+<li>参数：只能少，不能多</li>
+<li>返回值：要求返回必须返回，不要求则随意</li>
+</ul>
+</li>
+<li>对象：<ul>
+<li>赋值：鸭子辨型法，成员只能多，不能少</li>
+<li>字面量：严格完全匹配</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="（三）模块化"><a href="#（三）模块化" class="headerlink" title="（三）模块化"></a>（三）模块化</h2><h3 id="1-ES6-模块化标准"><a href="#1-ES6-模块化标准" class="headerlink" title="1.ES6 模块化标准"></a>1.ES6 模块化标准</h3><ul>
+<li>export 声明</li>
+<li>export default 默认导出</li>
+<li>import 变量 from ‘path’</li>
+</ul>
+<h3 id="2-commonJS-模块化标准"><a href="#2-commonJS-模块化标准" class="headerlink" title="2.commonJS 模块化标准"></a>2.commonJS 模块化标准</h3><ul>
+<li>exports.属性</li>
+<li>module.export = {}</li>
+<li>const 变量 require(‘path’)</li>
+</ul>
+<hr>
+<h1 id="二、进阶"><a href="#二、进阶" class="headerlink" title="二、进阶"></a>二、进阶</h1><h2 id="（一）面向对象"><a href="#（一）面向对象" class="headerlink" title="（一）面向对象"></a>（一）面向对象</h2><h3 id="1-类的继承"><a href="#1-类的继承" class="headerlink" title="1.类的继承"></a>1.类的继承</h3><ul>
+<li>A extends B<ul>
+<li>A继承自B</li>
+<li>A是子类、B是父类</li>
+<li>子类拥有父类的所有成员</li>
+<li>子类可以重写父类成员</li>
+<li>this指向是动态的</li>
+<li>super指向父类</li>
+</ul>
+</li>
+<li>A instanceof B <ul>
+<li>A是不是一个B</li>
+<li>子类对象始终可以赋值给父类对象，当只能使用父类定义的成员，应使用类型保护</li>
+<li>单根性：每个类只有一个父类（避免多继承）</li>
+<li>传递性：隔代也是父子</li>
+</ul>
+</li>
+<li>修饰符<ul>
+<li>public 均可以访问</li>
+<li>protected 自身及子类可以访问</li>
+<li>private 自身可访问</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-抽象类"><a href="#2-抽象类" class="headerlink" title="2.抽象类"></a>2.抽象类</h3><ul>
+<li>abstract<ul>
+<li>某个类只表示一个抽象的概念，只用于提取子类共有的成员，而不能直接创建对象</li>
+<li>抽象成员，父类只知道类型，不知道具体的实现，且子类必须要将其实现</li>
+</ul>
+</li>
+<li>模板模式<ul>
+<li>所有子类实现某个方法流程一致，只有某一步骤不一致<ul>
+<li>可能出现大量重复代码</li>
+<li>重复代码提取后，可能出现调用顺序紊乱</li>
+</ul>
+</li>
+<li>将该方法提取到父类实现</li>
+<li>将不一致的地方提取到父类为抽象方法，让子类去具体实现</li>
+<li>在父类方法中使用抽象方法</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-静态成员"><a href="#3-静态成员" class="headerlink" title="3.静态成员"></a>3.静态成员</h3><ul>
+<li>static<ul>
+<li>某个成员属于类本身，而不是具体的对象</li>
+<li>静态方法中this指向当前类</li>
+</ul>
+</li>
+<li>单例模式<ul>
+<li>某些类的实例对象，在系统中最多只能有一个（避免随意创建）</li>
+<li>将构造函数私有 private</li>
+<li>定义一个私有的静态属性，用于存储实例对象</li>
+<li>定义一个公有的静态方法，用于得到实例对象<ul>
+<li>判断静态属性是否已经有值，有值则直接返回该实例</li>
+<li>没有则创建一个实例并赋值给静态属性，然后返回该实例</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-接口"><a href="#4-接口" class="headerlink" title="4.接口"></a>4.接口</h3><ul>
+<li>implements<ul>
+<li>表达某个类是否拥有某种能力（是否实现某个接口）</li>
+</ul>
+</li>
+<li>类型保护函数<ul>
+<li>参数：param</li>
+<li>返回值：param is interface</li>
+</ul>
+</li>
+<li>接口可继承类<ul>
+<li>interface C extends A, B {}</li>
+<li>用A、B类的所有成员实现一个类型</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-索引器"><a href="#5-索引器" class="headerlink" title="5.索引器"></a>5.索引器</h3><ul>
+<li>[prop: string]: any</li>
+<li>[prop: number]: any<ul>
+<li>索引器需书写于类的最顶端（所有成员之前）</li>
+<li>可拓展对象</li>
+<li>除了类定义的成员外，可通过索引器进行成员拓展</li>
+<li>默认情况下，索引器可越过类型检查，需配置noImplicitAny</li>
+<li>在js中所有的成员名，包括数组索引都是字符串类型，成员名在使用数字类型时，会进行隐式类型转换</li>
+<li>在ts中成员名类型需要与索引器匹配</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-this指向约束"><a href="#6-this指向约束" class="headerlink" title="6.this指向约束"></a>6.this指向约束</h3><ul>
+<li>全局直接调用<ul>
+<li>严格模式：this指向undefined</li>
+<li>非严格模式：this指向全局对象</li>
+</ul>
+</li>
+<li>对象方法调用<ul>
+<li>this指向对象本身</li>
+</ul>
+</li>
+<li>事件处理函数调用<ul>
+<li>this指向事件处理对象</li>
+</ul>
+</li>
+<li>箭头函数<ul>
+<li>this指向声明位置的this指向</li>
+</ul>
+</li>
+<li>bind、apply、call手动绑定this<ul>
+<li>this指向绑定值</li>
+</ul>
+</li>
+<li>在ts中默认与js一致，严格this指向约束，需配置noImplicitThis</li>
+<li>在函数声明时，用第一个参数位置约定this指向</li>
+</ul>
+<h3 id="7-装饰器"><a href="#7-装饰器" class="headerlink" title="7.装饰器"></a>7.装饰器</h3><ul>
+<li><strong>约束类</strong><ul>
+<li>new () =&gt; object</li>
+<li>()内约束构造函数参数</li>
+</ul>
+</li>
+<li><strong>装饰类</strong><ul>
+<li>本质是一个函数</li>
+<li>参数：类本身</li>
+<li>返回值：<ul>
+<li>void：仅运行函数</li>
+<li>class：替换原来的类</li>
+</ul>
+</li>
+<li>运行时间<ul>
+<li>定义类之后立即运行</li>
+<li>多个装饰器，按栈的结构顺序运行（新进后出）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>装饰成员</strong><ul>
+<li>本质是一个函数</li>
+<li>参数：<ul>
+<li>参数1：<ul>
+<li>静态成员：类本身</li>
+<li>实例成员：类原型</li>
+</ul>
+</li>
+<li>参数2：成员名</li>
+<li>参数3：Object.defineProperty</li>
+</ul>
+</li>
+<li>返回值：<ul>
+<li>void：仅运行函数</li>
+<li>any：替换原来的成员</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>reflect-metadata</strong><ul>
+<li>第三方库</li>
+<li>用于保存元数据</li>
+</ul>
+</li>
+<li><strong>class-validator</strong><ul>
+<li>第三方库</li>
+<li>用于验证</li>
+</ul>
+</li>
+<li><strong>class-transformer</strong><ul>
+<li>第三方库</li>
+<li>用于将平面对象转换为类对象</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="（二）类型演算"><a href="#（二）类型演算" class="headerlink" title="（二）类型演算"></a>（二）类型演算</h2><h3 id="1-关键字"><a href="#1-关键字" class="headerlink" title="1.关键字"></a>1.关键字</h3><ul>
+<li>typeof</li>
+<li>keyof</li>
+<li>in</li>
+</ul>
+<h3 id="2-预设"><a href="#2-预设" class="headerlink" title="2.预设"></a>2.预设</h3><ul>
+<li>Partial<T> 所有成员可选</li>
+<li>Require<T> 所有成员必填</li>
+<li>Readonly<T> 所有成员只读</li>
+<li>Exclude&lt;T, U&gt; 剔除可以赋予给U的类型</li>
+<li>Extract&lt;T, U&gt; 保留可以赋予给U的类型</li>
+<li>NonNullable<T> 剔除null、undefined</li>
+<li>ReturnType<typrof fn> 得到某个函数的返回类型 </li>
+<li>InstanceType<typrof cl> 得到某个类的实例类型 </li>
+</ul>
+<hr>
+<h2 id="（三）声明文件"><a href="#（三）声明文件" class="headerlink" title="（三）声明文件"></a>（三）声明文件</h2>
+      
+      <!-- 打赏 -->
+      
+        <div id="reward-btn">
+          打赏
+        </div>
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huafuhub.github.io/blog/2020/11/09/TYPESCRIPTa/" data-id="ckhaccaei000uy8w1fppgbq2i"
+        class="article-share-link">分享</a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/blog/2020/11/09/MODULEa/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            模块化发展史
+          
+        </div>
+      </a>
+    
+    
+      <a href="/blog/2020/11/09/REACTa/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">react 应用篇</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        notify: false,
+        verify: false,
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        Huafu Li
+      </li>
+      <li>
+        
+          Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="http://localhost:4000/blog/mouse.svg" alt="“鼠”于Huafu的“2”！"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/pictures">相册</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/blog/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      <script src="/blog/js/jquery-2.0.3.min.js"></script>
+<script src="/blog/js/jquery.justifiedGallery.min.js"></script>
+<script src="/blog/js/lazyload.min.js"></script>
+<script src="/blog/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/blog/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+			onClick: (e) => {
+      	document.getElementById(e.target.innerText).scrollIntoView()
+      	return false;
+    	}
+    });
+  </script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+<script src="/blog/js/ayer.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
+
+  </div>
+</body>
+
+</html>

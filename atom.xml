@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://huafuhub.github.io/blog/"/>
-  <updated>2020-02-26T13:17:41.979Z</updated>
+  <updated>2020-11-09T09:21:10.763Z</updated>
   <id>https://huafuhub.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,308 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PACKb</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/PACKb/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/PACKb/</id>
+    <published>2020-11-09T08:43:47.000Z</published>
+    <updated>2020-11-09T09:21:10.763Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>包管理工具</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/PACKa/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/PACKa/</id>
+    <published>2020-11-09T08:43:08.000Z</published>
+    <updated>2020-11-09T09:21:45.561Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;包管理工具概述&quot;&gt;&lt;a href=&quot;#包管理工具概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ES6模块化标准</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/MODULEd/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/MODULEd/</id>
+    <published>2020-11-09T08:41:20.000Z</published>
+    <updated>2020-11-09T09:19:07.494Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;ES6模块化简介&quot;&gt;&lt;a href=&quot;#ES6模块化简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AMD与CMD模块化标准</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/MODULEc/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/MODULEc/</id>
+    <published>2020-11-09T08:38:12.000Z</published>
+    <updated>2020-11-09T09:19:07.443Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;浏览器端模块化的难题&quot;&gt;&lt;a href=&quot;#浏览器端模块化的难题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CommonJS模块化标准</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/MODULEb/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/MODULEb/</id>
+    <published>2020-11-09T08:37:12.000Z</published>
+    <updated>2020-11-09T09:19:07.395Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;CommonJS&quot;&gt;&lt;a href=&quot;#CommonJS&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>模块化发展史</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/MODULEa/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/MODULEa/</id>
+    <published>2020-11-09T08:36:17.000Z</published>
+    <updated>2020-11-09T09:19:07.342Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;JavaScript-模块化发展史-ignore&quot;&gt;&lt;a href=&quot;#JavaScript-模块化发展史-ignore&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 模块化发展史 {ignore}&quot;&gt;&lt;/a&gt;JavaScript
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>typescript 应用篇</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/TYPESCRIPTa/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/TYPESCRIPTa/</id>
+    <published>2020-11-09T08:31:26.000Z</published>
+    <updated>2020-11-09T09:22:35.152Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、入门&quot;&gt;&lt;a href=&quot;#一、入门&quot; class=&quot;headerlink&quot; title=&quot;一、入门&quot;&gt;&lt;/a&gt;一、入门&lt;/h1&gt;&lt;h2 id=&quot;（一）环境配置&quot;&gt;&lt;a href=&quot;#（一）环境配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>react 应用篇</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/REACTa/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/REACTa/</id>
+    <published>2020-11-09T08:30:06.000Z</published>
+    <updated>2020-11-09T09:22:57.154Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、开发环境&quot;&gt;&lt;a href=&quot;#一、开发环境&quot; class=&quot;headerlink&quot; title=&quot;一、开发环境&quot;&gt;&lt;/a&gt;一、开发环境&lt;/h1&gt;&lt;h2 id=&quot;（一）浏览器&quot;&gt;&lt;a href=&quot;#（一）浏览器&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JWT原理详解</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/JWTa/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/JWTa/</id>
+    <published>2020-11-09T08:28:11.000Z</published>
+    <updated>2020-11-09T09:20:33.334Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;随着前后端分离的发展，以及数据中心的建立，越来越多的公司会创建一个中心服务器，服务于各种产品线。&lt;/p&gt;
+&lt;p&gt;而这些产品线上的产品，它们可能有着各种终端设备，包括但不仅限于浏览器、桌面应用、移动端应用、平板应用、甚至智能家居&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CORS原理详解</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/CORSa/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/CORSa/</id>
+    <published>2020-11-09T08:25:57.000Z</published>
+    <updated>2020-11-09T09:19:55.180Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;阅读本文，你需要首先知道：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;浏览器的同源策略&lt;/li&gt;
+&lt;li&gt;跨域问题&lt;/li&gt;
+&lt;li&gt;JSONP原理&lt;/li&gt;
+&lt;li&gt;cookie原理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;JSONP并不是一个好
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>cookie的基本概念</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/Cookiea/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/Cookiea/</id>
+    <published>2020-11-09T08:24:27.000Z</published>
+    <updated>2020-11-09T09:19:39.173Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一个不大不小的问题&quot;&gt;&lt;a href=&quot;#一个不大不小的问题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Nodejs 应用篇</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/NODEJSa/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/NODEJSa/</id>
+    <published>2020-11-09T08:22:43.000Z</published>
+    <updated>2020-11-09T09:23:32.549Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、node-核心&quot;&gt;&lt;a href=&quot;#一、node-核心&quot; class=&quot;headerlink&quot; title=&quot;一、node 核心&quot;&gt;&lt;/a&gt;一、node 核心&lt;/h1&gt;&lt;h2 id=&quot;（一）全局对象-global&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ES6 --- 进阶篇</title>
+    <link href="https://huafuhub.github.io/blog/2020/11/09/ES6b/"/>
+    <id>https://huafuhub.github.io/blog/2020/11/09/ES6b/</id>
+    <published>2020-11-09T08:16:34.000Z</published>
+    <updated>2020-11-09T09:20:12.291Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一-变量&quot;&gt;&lt;a href=&quot;#一-变量&quot; class=&quot;headerlink&quot; title=&quot;(一) 变量&quot;&gt;&lt;/a&gt;(一) 变量&lt;/h2&gt;&lt;h3 id=&quot;1-var&quot;&gt;&lt;a href=&quot;#1-var&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>MockJs 与 Axios 的使用</title>
@@ -116,7 +418,7 @@
     <link href="https://huafuhub.github.io/blog/2020/01/06/GITa/"/>
     <id>https://huafuhub.github.io/blog/2020/01/06/GITa/</id>
     <published>2020-01-05T16:00:00.000Z</published>
-    <updated>2020-02-26T13:19:58.906Z</updated>
+    <updated>2020-02-26T13:32:12.934Z</updated>
     
     <summary type="html">
     
@@ -171,174 +473,6 @@
         
         
           &lt;h1 id=&quot;一、&quot;&gt;&lt;a href=&quot;#一、&quot; class=&quot;headerlink&quot; title=&quot;一、$()&quot;&gt;&lt;/a&gt;一、$()&lt;/h1&gt;&lt;h3 id=&quot;1-css-selector&quot;&gt;&lt;a href=&quot;#1-css-selector&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ES6 --- 应用篇</title>
-    <link href="https://huafuhub.github.io/blog/2020/01/03/ES6a/"/>
-    <id>https://huafuhub.github.io/blog/2020/01/03/ES6a/</id>
-    <published>2020-01-02T18:00:00.000Z</published>
-    <updated>2020-01-07T10:42:56.883Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、工具-babel-优雅降级&quot;&gt;&lt;a href=&quot;#一、工具-babel-优雅降级&quot; class=&quot;headerlink&quot; title=&quot;一、工具 babel 优雅降级&quot;&gt;&lt;/a&gt;一、工具 babel 优雅降级&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;npm init
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ES5 --- 应用篇</title>
-    <link href="https://huafuhub.github.io/blog/2020/01/03/ES5a/"/>
-    <id>https://huafuhub.github.io/blog/2020/01/03/ES5a/</id>
-    <published>2020-01-02T17:00:00.000Z</published>
-    <updated>2020-01-07T10:42:41.527Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;[toc]&lt;/p&gt;
-&lt;h2 id=&quot;一、js数据类型&quot;&gt;&lt;a href=&quot;#一、js数据类型&quot; class=&quot;headerlink&quot; title=&quot;一、js数据类型&quot;&gt;&lt;/a&gt;一、js数据类型&lt;/h2&gt;&lt;h3 id=&quot;（一）原始类型&quot;&gt;&lt;a href=&quot;#（一）原始类型&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CSS3 --- 应用篇</title>
-    <link href="https://huafuhub.github.io/blog/2020/01/02/CSS3a/"/>
-    <id>https://huafuhub.github.io/blog/2020/01/02/CSS3a/</id>
-    <published>2020-01-01T19:00:00.000Z</published>
-    <updated>2020-01-07T10:42:20.923Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;一、css3’s-compatible-history&quot;&gt;&lt;a href=&quot;#一、css3’s-compatible-history&quot; class=&quot;headerlink&quot; title=&quot;一、css3’s compatible
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CSS --- 兼容篇</title>
-    <link href="https://huafuhub.github.io/blog/2020/01/02/CSS2b/"/>
-    <id>https://huafuhub.github.io/blog/2020/01/02/CSS2b/</id>
-    <published>2020-01-01T18:00:00.000Z</published>
-    <updated>2020-01-07T10:42:08.510Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;（一）主浏览器&quot;&gt;&lt;a href=&quot;#（一）主浏览器&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CSS2 --- 应用篇</title>
-    <link href="https://huafuhub.github.io/blog/2020/01/02/CSS2a/"/>
-    <id>https://huafuhub.github.io/blog/2020/01/02/CSS2a/</id>
-    <published>2020-01-01T17:00:00.000Z</published>
-    <updated>2020-01-07T10:41:56.185Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;（一）概述&quot;&gt;&lt;a href=&quot;#（一）概述&quot; class=&quot;headerlink&quot; title=&quot;（一）概述&quot;&gt;&lt;/a&gt;（一）概述&lt;/h2&gt;&lt;h3 id=&quot;1-概念&quot;&gt;&lt;a href=&quot;#1-概念&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HTML5 --- 应用篇</title>
-    <link href="https://huafuhub.github.io/blog/2020/01/01/HTML5b/"/>
-    <id>https://huafuhub.github.io/blog/2020/01/01/HTML5b/</id>
-    <published>2019-12-31T18:00:00.000Z</published>
-    <updated>2020-01-07T10:41:32.756Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-文本&quot;&gt;&lt;a href=&quot;#1-文本&quot; class=&quot;headerlink&quot; title=&quot;1.文本&quot;&gt;&lt;/a&gt;1.文本&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;center&quot;&gt;元素&lt;/th&gt;
-&lt;th
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HTML --- 概述篇</title>
-    <link href="https://huafuhub.github.io/blog/2020/01/01/HTML5a/"/>
-    <id>https://huafuhub.github.io/blog/2020/01/01/HTML5a/</id>
-    <published>2019-12-31T17:00:00.000Z</published>
-    <updated>2020-01-07T10:44:32.593Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-概念&quot;&gt;&lt;a href=&quot;#1-概念&quot; class=&quot;headerlink&quot; title=&quot;1.概念&quot;&gt;&lt;/a&gt;1.概念&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;HTML (超文本标记语言——HyperText Markup Language)
         
       
     

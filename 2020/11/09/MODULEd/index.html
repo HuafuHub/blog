@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    ES6模块化标准 |  “鼠”于Huafu的“2”！
+  </title>
+  
+  <link rel="shortcut icon" href="http://localhost:4000/blog/favicon.ico" />
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  <script src="/blog/js/pace.min.js"></script>
+
+  
+
+  
+
+<link rel="alternate" href="/blog/atom.xml" title="“鼠”于Huafu的“2”！" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-MODULEd" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  ES6模块化标准
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/blog/2020/11/09/MODULEd/" class="article-date">
+  <time datetime="2020-11-09T08:41:20.000Z" itemprop="datePublished">2020-11-09</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h1 id="ES6模块化简介"><a href="#ES6模块化简介" class="headerlink" title="ES6模块化简介"></a>ES6模块化简介</h1><p>ECMA组织参考了众多社区模块化标准，终于在2015年，随着ES6发布了官方的模块化标准，后成为ES6模块化</p>
+<p>ES6模块化具有以下的特点</p>
+<ol>
+<li>使用依赖<strong>预声明</strong>的方式导入模块<ol>
+<li>依赖延迟声明<ol>
+<li>优点：某些时候可以提高效率</li>
+<li>缺点：无法在一开始确定模块依赖关系（比较模糊）</li>
+</ol>
+</li>
+<li>依赖预声明<ol>
+<li>优点：在一开始可以确定模块依赖关系</li>
+<li>缺点：某些时候效率较低</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>灵活的多种导入导出方式</li>
+<li>规范的路径表示法：所有路径必须以./或../开头</li>
+</ol>
+<h1 id="基本导入导出"><a href="#基本导入导出" class="headerlink" title="基本导入导出"></a>基本导入导出</h1><h2 id="模块的引入"><a href="#模块的引入" class="headerlink" title="模块的引入"></a>模块的引入</h2><p><strong>注意：这一部分非模块化标准</strong></p>
+<p>目前，浏览器使用以下方式引入一个ES6模块文件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"入口文件"</span> <span class="attr">type</span>=<span class="string">"module"</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<h2 id="模块的基本导出和导入"><a href="#模块的基本导出和导入" class="headerlink" title="模块的基本导出和导入"></a>模块的基本导出和导入</h2><p>ES6中的模块导入导出分为两种：</p>
+<ol>
+<li>基本导入导出</li>
+<li>默认导入导出</li>
+</ol>
+<p><img src="assets/2019-12-03-17-00-44.png" alt=""></p>
+<h3 id="基本导出"><a href="#基本导出" class="headerlink" title="基本导出"></a>基本导出</h3><p>类似于 <code>exports.xxx = xxxx</code></p>
+<p>基本导出可以有多个，每个必须有名称</p>
+<p>基本导出的语法如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> 声明表达式</span></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> &#123;具名符号&#125;</span></pre></td></tr></table></figure>
+
+<p>由于基本导出必须具有名称，所以要求导出内容必须跟上<strong>声明表达式</strong>或<strong>具名符号</strong></p>
+<h3 id="基本导入"><a href="#基本导入" class="headerlink" title="基本导入"></a>基本导入</h3><p>由于使用的是<strong>依赖预加载</strong>，因此，导入任何其他模块，导入代码必须放置到所有代码之前</p>
+<p>对于基本导出，如果要进行导入，使用下面的代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;导入的符号列表&#125; <span class="keyword">from</span> <span class="string">"模块路径"</span></span></pre></td></tr></table></figure>
+
+<p>注意以下细节：</p>
+<ul>
+<li>导入时，可以通过关键字<code>as</code>对导入的符号进行重命名</li>
+<li>导入时使用的符号是常量，不可修改</li>
+<li>可以使用*号导入所有的基本导出，形成一个对象</li>
+</ul>
+<h1 id="默认导入导出"><a href="#默认导入导出" class="headerlink" title="默认导入导出"></a>默认导入导出</h1><p><img src="assets/2019-12-03-17-00-44.png" alt=""></p>
+<h2 id="默认导出"><a href="#默认导出" class="headerlink" title="默认导出"></a>默认导出</h2><p>每个模块，除了允许有多个基本导出之外，还允许有一个默认导出</p>
+<p>默认导出类似于CommonJS中的<code>module.exports</code>，由于只有一个，因此无需具名</p>
+<p>具体的语法是</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> 默认导出的数据</span></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> &#123;默认导出的数据 <span class="keyword">as</span> <span class="keyword">default</span>&#125;</span></pre></td></tr></table></figure>
+
+<p>由于每个模块仅允许有一个默认导出，因此，每个模块不能出现多个默认导出语句</p>
+<h2 id="默认导入"><a href="#默认导入" class="headerlink" title="默认导入"></a>默认导入</h2><p>需要想要导入一个模块的默认导出，需要使用下面的语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> 接收变量名 <span class="keyword">from</span> <span class="string">"模块路径"</span></span></pre></td></tr></table></figure>
+
+<p>类似于CommonJS中的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 接收变量名 = <span class="built_in">require</span>(<span class="string">"模块路径"</span>)</span></pre></td></tr></table></figure>
+
+<p>由于默认导入时变量名是自行定义的，因此没有别名一说</p>
+<p>如果希望同时导入某个模块的默认导出和基本导出，可以使用下面的语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> 接收默认导出的变量, &#123;接收基本导出的变量&#125; <span class="keyword">from</span> <span class="string">"模块路径"</span></span></pre></td></tr></table></figure>
+
+<p>注：如果使用*号，会将所有基本导出和默认导出聚合到一个对象中，默认导出会作为属性default存在</p>
+<h1 id="ES6模块化的其他细节"><a href="#ES6模块化的其他细节" class="headerlink" title="ES6模块化的其他细节"></a>ES6模块化的其他细节</h1><ol>
+<li><strong>尽量导出不可变值</strong></li>
+</ol>
+<p>当导出一个内容时，尽量保证该内容是不可变的（大部分情况都是如此）</p>
+<p>因为，虽然导入后，无法更改导入内容，但是在导入的模块内部却有可能发生更改，这将导致一些无法预料的事情发生</p>
+<ol start="2">
+<li><strong>可以使用无绑定的导入用于执行一些初始化代码</strong></li>
+</ol>
+<p>如果我们只是想执行模块中的一些代码，而不需要导入它的任何内容，可以使用无绑定的导入：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"模块路径"</span></span></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>可以使用绑定再导出，来重新导出来自另一个模块的内容</strong></li>
+</ol>
+<p>有的时候，我们可能需要用一个模块封装多个模块，然后有选择的将多个模块的内容分别导出，可以使用下面的语法轻松完成</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> &#123;绑定的标识符&#125; <span class="keyword">from</span> <span class="string">"模块路径"</span></span></pre></td></tr></table></figure>
+
+<p><img src="assets/2019-12-04-14-33-14.png" alt=""></p>
+
+      
+      <!-- 打赏 -->
+      
+        <div id="reward-btn">
+          打赏
+        </div>
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huafuhub.github.io/blog/2020/11/09/MODULEd/" data-id="ckhaccae9000ly8w1f7ne9tm4"
+        class="article-share-link">分享</a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/blog/2020/11/09/PACKa/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            包管理工具
+          
+        </div>
+      </a>
+    
+    
+      <a href="/blog/2020/11/09/MODULEc/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">AMD与CMD模块化标准</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        notify: false,
+        verify: false,
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        Huafu Li
+      </li>
+      <li>
+        
+          Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="http://localhost:4000/blog/mouse.svg" alt="“鼠”于Huafu的“2”！"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/pictures">相册</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/blog/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      <script src="/blog/js/jquery-2.0.3.min.js"></script>
+<script src="/blog/js/jquery.justifiedGallery.min.js"></script>
+<script src="/blog/js/lazyload.min.js"></script>
+<script src="/blog/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/blog/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+			onClick: (e) => {
+      	document.getElementById(e.target.innerText).scrollIntoView()
+      	return false;
+    	}
+    });
+  </script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+<script src="/blog/js/ayer.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
+
+  </div>
+</body>
+
+</html>

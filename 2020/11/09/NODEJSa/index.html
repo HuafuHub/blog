@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    Nodejs 应用篇 |  “鼠”于Huafu的“2”！
+  </title>
+  
+  <link rel="shortcut icon" href="http://localhost:4000/blog/favicon.ico" />
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  <script src="/blog/js/pace.min.js"></script>
+
+  
+
+  
+
+<link rel="alternate" href="/blog/atom.xml" title="“鼠”于Huafu的“2”！" type="application/atom+xml">
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-NODEJSa" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Nodejs 应用篇
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/blog/2020/11/09/NODEJSa/" class="article-date">
+  <time datetime="2020-11-09T08:22:43.000Z" itemprop="datePublished">2020-11-09</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h1 id="一、node-核心"><a href="#一、node-核心" class="headerlink" title="一、node 核心"></a>一、node 核心</h1><h2 id="（一）全局对象-global"><a href="#（一）全局对象-global" class="headerlink" title="（一）全局对象 global"></a>（一）全局对象 global</h2><h3 id="1-Buffer-缓冲器"><a href="#1-Buffer-缓冲器" class="headerlink" title="1.Buffer 缓冲器"></a>1.Buffer 缓冲器</h3><ul>
+<li>Buffer 类是 JavaScript 的 Uint8Array 类的子类，且继承时带上了涵盖额外用例的方法。</li>
+<li>当在 Buffer 和字符串之间转换时，可以指定字符编码。 如果未指定字符编码，则使用 UTF-8 作为默认值。</li>
+<li>Buffer.from(data, encoding)</li>
+<li>Buffer.byteLength(data, encoding)</li>
+<li>Buffer.concat(list)</li>
+<li>Buffer.isBuffer(obj)</li>
+</ul>
+<h3 id="2-process-进程"><a href="#2-process-进程" class="headerlink" title="2.process 进程"></a>2.process 进程</h3><ul>
+<li>process 对象是一个全局变量，提供了有关当前 Node.js 进程的信息并对其进行控制。</li>
+<li>process.arch：为其编译 Node.js 二进制文件的操作系统的 CPU 架构。</li>
+<li>process.env： 属性会返回包含用户环境的对象</li>
+<li>process.platform： 属性返回字符串，标识 Node.js 进程运行其上的操作系统平台。</li>
+<li>process.cwd()： 方法会返回 Node.js 进程的当前工作目录。</li>
+<li>process.ppid： 属性返回当前父进程的 PID。</li>
+<li>process.pid： 属性返回进程的 PID。</li>
+<li>process.kill(pid)：发送的信号可能是做一些与杀死目标进程无关的事情</li>
+</ul>
+<h3 id="3-console-控制台"><a href="#3-console-控制台" class="headerlink" title="3.console 控制台"></a>3.console 控制台</h3><ul>
+<li>console 模块提供了一个简单的调试控制台，类似于 Web 浏览器提供的 JavaScript 控制台。</li>
+<li>console.time([label]) 启动一个计时器，用以计算一个操作的持续时间。 计时器由一个唯一的 label 标识。</li>
+<li>console.timeEnd([label]) 停止先前通过调用 console.time() 启动的计时器，并打印结果到 stdout。</li>
+</ul>
+<h3 id="4-commonJS-模块化"><a href="#4-commonJS-模块化" class="headerlink" title="4.commonJS 模块化"></a>4.commonJS 模块化</h3><ul>
+<li>commonJS模块化是运行在一个函数下的<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params">exports, require, module, __filename, __dirname</span>) </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="comment">/*开发者代码片段*/</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">return</span> <span class="built_in">module</span>.exports</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="5-ES6-模块化"><a href="#5-ES6-模块化" class="headerlink" title="5.ES6 模块化"></a>5.ES6 模块化</h3><ul>
+<li>ES6模块化是使用.mjs后缀，目前处于试验阶段</li>
+</ul>
+<hr>
+<h2 id="（二）内置模块"><a href="#（二）内置模块" class="headerlink" title="（二）内置模块"></a>（二）内置模块</h2><h3 id="1-os-系统操作"><a href="#1-os-系统操作" class="headerlink" title="1.os 系统操作"></a>1.os 系统操作</h3><ul>
+<li>os.EOL：操作系统特定的行末标志。<ul>
+<li>在 POSIX 上是 \n。</li>
+<li>在 Windows 上是 \r\n。</li>
+</ul>
+</li>
+<li>os.arch()：返回为其编译 Node.js 二进制文件的操作系统的 CPU 架构。</li>
+<li>os.cpus()：返回一个对象数组，其中包含有关每个逻辑 CPU 内核的信息。</li>
+<li>os.freemem()：以整数的形式返回空闲的系统内存量（以字节为单位）。</li>
+<li>os.homedir()：返回当前用户的主目录的字符串路径。</li>
+<li>os.hostname()：以字符串的形式返回操作系统的主机名。</li>
+<li>os.platform()： 返回标识操作系统平台的字符串。</li>
+</ul>
+<hr>
+<h3 id="2-path-路径操作"><a href="#2-path-路径操作" class="headerlink" title="2.path 路径操作"></a>2.path 路径操作</h3><ul>
+<li>path 模块提供了一些实用工具，用于处理文件和目录的路径。</li>
+<li>path.dirname() 方法会返回 path 的目录名，类似于 Unix 的 dirname 命令。 尾部的目录分隔符会被忽略。</li>
+<li>path.basename(path)：方法会返回 path 的最后一部分，类似于 Unix 的 basename 命令。 尾部的目录分隔符会被忽略。</li>
+<li>path.extname()： 方法会返回 path 的扩展名，如果在 path 的最后一部分中没有，则返回空字符串。</li>
+<li>path.format()： 方法从对象返回路径字符串。 </li>
+<li>path.parse()： 方法从路径字符串返回对象。</li>
+<li>path.isAbsolute()： 方法检测 path 是否为绝对路径。</li>
+<li>path.relative(from, to)：方法根据当前工作目录返回 from 到 to 的相对路径。</li>
+<li>path.resolve()： 方法会将路径或路径片段的序列解析为绝对路径。</li>
+<li>path.join([…paths])：方法会将所有给定的 path 片段连接到一起（使用平台特定的分隔符作为定界符），然后规范化生成的路径。</li>
+<li>path.normalize()： 方法规范化给定的 path，解析 ‘..’ 和 ‘.’ 片段。</li>
+<li>path.delimiter：提供平台特定的路径定界符</li>
+<li>path.sep：提供平台特定的路径片段分隔符</li>
+</ul>
+<hr>
+<h3 id="3-url-地址操作"><a href="#3-url-地址操作" class="headerlink" title="3.url 地址操作"></a>3.url 地址操作</h3><ul>
+<li>url 模块用于处理与解析 URL。</li>
+<li>url.origin：获取只读的序列化的 URL 的 origin。<ul>
+<li>url.protocol：获取及设置 URL 的协议部分。</li>
+<li>url.host：获取及设置 URL 的主机部分。</li>
+<li>url.hostname：获取及设置 URL 的主机名部分。 url.host 和 url.hostname 之间的区别是 url.hostname 不包含端口。</li>
+<li>url.port：获取及设置 URL 的端口部分。</li>
+</ul>
+</li>
+<li>url.pathname：获取及设置 URL 的路径部分。</li>
+<li>url.search：获取及设置 URL 的序列化查询部分。</li>
+<li>url.hash：获取及设置 URL 的片段部分。</li>
+<li>url.href：获取 href 属性的值等同于调用 url.toString()。<ul>
+<li>url.parse(urlString[, parseQueryString[, slashesDenoteHost]])</li>
+<li>url.format(URL)</li>
+<li>url.parse(urlString)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-util-工具库"><a href="#4-util-工具库" class="headerlink" title="4.util 工具库"></a>4.util 工具库</h3><ul>
+<li>util.callbackify(original) 将异步函数处理为回调模式</li>
+<li>util.promisify(original) 将回调模式处理为异步函数</li>
+<li>util.inherits(constructor, superConstructor) 请使用 ES6 extends 关键词获得语言层面的继承支持。</li>
+</ul>
+<hr>
+<h3 id="5-fs-I-O操作"><a href="#5-fs-I-O操作" class="headerlink" title="5.fs I/O操作"></a>5.fs I/O操作</h3><ul>
+<li>fs.Stats 对象提供了关于文件的信息。<ul>
+<li>stats.isDirectory()</li>
+<li>stats.isFile()</li>
+<li>stats.size </li>
+<li>stats.atime 表明上次访问此文件的时间戳。</li>
+<li>stats.mtime 表明上次修改此文件的时间戳。</li>
+<li>stats.ctime 表明上次更改文件状态的时间戳。</li>
+<li>stats.birthtime 表示此文件的创建时间的时间戳。</li>
+</ul>
+</li>
+<li>fs.readdir(path, option, callback) 读取文件目录</li>
+<li>fs.readFile(path, option, callback) 读取文件</li>
+<li>fs.readdir() 读取文件目录</li>
+<li>fs.writeFile(path, data, option, callback) 写入文件</li>
+<li>fs.mkdir(path[, options], callback) 创建目录</li>
+<li>fs.rename(oldPath, newPath, callback) 重命名</li>
+<li>fs.createReadStream(path[, options]) 此方法返回的可读流具有 64 kb 的默认 highWaterMark。<ul>
+<li>配置：<ul>
+<li>encoding： 编码方式</li>
+<li>start： 起始字节</li>
+<li>end: 结束字节</li>
+<li>highWaterMark：流量大小</li>
+</ul>
+</li>
+<li>事件：<ul>
+<li>‘close’ 事件，当流或其底层资源（比如文件描述符）被关闭时触发。</li>
+<li>‘data’ 事件，当流将数据块传送给消费者后触发。</li>
+<li>‘end’ 事件，在数据被完全消费掉后才会触发。</li>
+<li>‘error’ 事件，底层的流由于底层内部的故障而无法生成数据，或者流的实现尝试推送无效的数据块由 Readable 实现触发。</li>
+<li>‘pause’ 事件，当调用 stream.pause() 并且 readsFlowing 不为 false 时触发。</li>
+<li>‘resume’ 事件，当调用 stream.resume() 并且 readsFlowing 不为 true 时触发。</li>
+<li>‘readable’ 事件，当有数据可从流中读取时触发。</li>
+</ul>
+</li>
+<li>方法：<ul>
+<li>readable.isPaused() 方法返回可读流当前的操作状态。</li>
+<li>stream.pause() 读取暂停</li>
+<li>stream.resume() 恢复读取</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fs.createWriteStream(path[, options]) 此方法返回的可写流具有 64 kb 的默认 highWaterMark。<ul>
+<li>事件：<ul>
+<li>‘close’ 事件，当流或其底层资源（比如文件描述符）被关闭时触发。</li>
+<li>‘data’ 事件，当流将数据块传送给消费者后触发。</li>
+<li>‘end’ 事件，在数据被完全消费掉后才会触发。</li>
+<li>‘error’ 事件，如果在写入或管道数据时发生错误，则会触发。</li>
+<li>‘drain’ 事件，如果调用 stream.write(chunk) 返回 false，则当可以继续写入数据到流时会触发。</li>
+<li>‘finish’ 事件，调用 stream.end() 且缓冲数据都已传给底层系统之后触发。</li>
+</ul>
+</li>
+<li>方法：<ul>
+<li>readable.write() 方法返回管道是否可继续流入。</li>
+<li>stream.end() 结束写入</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="6-net-网络"><a href="#6-net-网络" class="headerlink" title="6.net 网络"></a>6.net 网络</h3><ul>
+<li>net.Server 类<ul>
+<li>事件：<ul>
+<li>‘close’ 事件，当 server 关闭的时候触发。</li>
+<li>‘connection’ 事件，当一个新的连接建立的时候触发。</li>
+<li>‘error’ 事件，当错误出现的时候触发。</li>
+<li>‘listening’ 事件， 当调用 server.listen() 绑定服务器之后触发。</li>
+</ul>
+</li>
+<li>方法：<ul>
+<li>server.close([callback]) 阻止 server 接受新的连接并保持现有的连接。 </li>
+<li>server.getConnections(callback) 异步获取服务器的当前并发连接数。</li>
+<li>server.listen([port[, host[, backlog]]][, callback])  启动一个服务器来监听连接。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>net.Socket 类<ul>
+<li>事件：<ul>
+<li>‘close’ 事件，一旦 socket 完全关闭就发出该事件。</li>
+<li>‘connect’ 事件，当一个 socket 连接成功建立的时候触发。</li>
+<li>‘error’ 事件，当错误出现的时候触发。</li>
+<li>‘data’ 事件， 当接收到数据的时触发该事件。</li>
+<li>‘drain’ 事件，当写入缓冲区变为空时触发。</li>
+<li>‘end’ 事件，当 socket 的另一端发送一个 FIN 包的时候触发，从而结束 socket 的可读端。</li>
+<li>方法：</li>
+</ul>
+</li>
+<li>server.close([callback]) 阻止 server 接受新的连接并保持现有的连接。 </li>
+<li>server.getConnections(callback) 异步获取服务器的当前并发连接数。</li>
+<li>socket.connect(port[, host][, connectListener]) 在给定的套接字上启动一个连接。</li>
+<li>socket.end([data[, encoding]][, callback]) 半关闭 socket。</li>
+<li>socket.pause() 暂停读写数据。也就是说，’data’ 事件将不会再被触发。可以用于上传节流。</li>
+<li>socket.resume() 在调用 socket.pause() 之后恢复读取数据。</li>
+<li>socket.write(data[, encoding][, callback]) 在 socket 上发送数据。</li>
+</ul>
+</li>
+<li>net.createConnection(port[, host][, connectListener])</li>
+<li>net.createServer([options][, connectionListener])</li>
+<li>net.connect(port[, host][, connectListener])</li>
+</ul>
+<hr>
+<h3 id="7-http"><a href="#7-http" class="headerlink" title="7.http"></a>7.http</h3><ul>
+<li>http.ClientRequest 类<ul>
+<li>事件：<ul>
+<li>‘abort’ 事件，当请求被客户端中止时触发。</li>
+<li>‘connect’ 事件，每次服务器使用 CONNECT 方法响应请求时都会触发。</li>
+<li>‘response’ 事件，当收到此请求的响应时触发。 此事件仅触发一次。</li>
+</ul>
+</li>
+<li>方法：<ul>
+<li>request.write(chunk[, encoding][, callback]) 发送一个请求主体的数据块。</li>
+<li>request.end([data[, encoding]][, callback]) 完成发送请求。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>http.Server 类<ul>
+<li>事件：<ul>
+<li>‘close’ 事件，当服务器关闭时触发。</li>
+<li>‘connect’ 事件，每次客户端请求 HTTP CONNECT 方法时触发。</li>
+<li>‘connection’ 事件，建立新的 TCP 流时会触发此事件。</li>
+<li>‘request’ 事件，每当有请求时触发。 每个连接可能有多个请求（对于 HTTP Keep-Alive 连接而言）。</li>
+</ul>
+</li>
+<li>方法：<ul>
+<li>server.listen() 启动 HTTP 服务器用于监听连接。</li>
+<li>server.close([callback]) 停止服务器接受新连接。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>http.ServerResponse 类<ul>
+<li>事件：<ul>
+<li>‘close’ 事件，表明底层的连接已被终止。</li>
+<li>‘finish’ 事件，响应发送后触发。</li>
+</ul>
+</li>
+<li>方法：<ul>
+<li>response.write(chunk[, encoding][, callback]) 发送一块响应主体。 可以多次调用该方法以提供连续的响应主体片段。</li>
+<li>response.end([data[, encoding]][, callback]) 发送所有响应头和主体，该服务器应该视为此消息已完成。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>http.IncomingMessage 类<ul>
+<li>事件：<ul>
+<li>‘aborted’ 事件，当请求中止时触发。</li>
+<li>‘close’ 事件，表明底层连接已关闭。</li>
+</ul>
+</li>
+<li>属性：<ul>
+<li>message.url，仅对从 http.Server 获取的请求有效。请求的 URL 字符串。 它仅包含实际的 HTTP 请求中存在的 URL。</li>
+<li>message.method，仅对从 http.Server 获取的请求有效。请求方法为字符串。 只读。</li>
+<li>message.headers，请求或响应的消息头对象。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>http.request(url[, options][, callback]) 客户端</strong><ul>
+<li>返回值：http.ClientRequest 对象</li>
+<li>回调参数：http.IncomingMessage 对象</li>
+</ul>
+</li>
+<li><strong>http.createServer([options][, requestListener]) 服务端</strong><ul>
+<li>返回值：http.Server 对象</li>
+<li>回调参数1：http.IncomingMessage 对象</li>
+<li>回调参数2：http.ServerResponse 对象</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="8-events"><a href="#8-events" class="headerlink" title="8.events"></a>8.events</h3><ul>
+<li>EventEmitter 类<ul>
+<li>用于创建一个事件管理对象event</li>
+<li>event.on() 注册事件</li>
+<li>event.once() 注册事件</li>
+<li>event.emit() 触发事件</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="（三）生命周期"><a href="#（三）生命周期" class="headerlink" title="（三）生命周期"></a>（三）生命周期</h2>
+      
+      <!-- 打赏 -->
+      
+        <div id="reward-btn">
+          打赏
+        </div>
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huafuhub.github.io/blog/2020/11/09/NODEJSa/" data-id="ckhaccaeb000oy8w1481824w9"
+        class="article-share-link">分享</a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/blog/2020/11/09/Cookiea/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            cookie的基本概念
+          
+        </div>
+      </a>
+    
+    
+      <a href="/blog/2020/11/09/ES6b/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">ES6 --- 进阶篇</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        notify: false,
+        verify: false,
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        Huafu Li
+      </li>
+      <li>
+        
+          Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/blog/"><img src="http://localhost:4000/blog/mouse.svg" alt="“鼠”于Huafu的“2”！"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/blog/pictures">相册</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/blog/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/blog/./images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      <script src="/blog/js/jquery-2.0.3.min.js"></script>
+<script src="/blog/js/jquery.justifiedGallery.min.js"></script>
+<script src="/blog/js/lazyload.min.js"></script>
+<script src="/blog/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/blog/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+			onClick: (e) => {
+      	document.getElementById(e.target.innerText).scrollIntoView()
+      	return false;
+    	}
+    });
+  </script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+<script src="/blog/js/ayer.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
+
+  </div>
+</body>
+
+</html>
